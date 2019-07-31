@@ -21,4 +21,4 @@ steps:
   inputs:
     project: '$(Build.SourcesDirectory)/test_xml'
     environment: 'remote'
-    testCaseTags: 'extended|smoke'
+    testCaseTags: '(extended, smoke)'
