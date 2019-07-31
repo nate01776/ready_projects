@@ -17,8 +17,3 @@ steps:
     defaultVersionType: 'latest'
     downloadPath: '$(System.ArtifactsDirectory)'
 
-- task: SoapUIProForAzureDevOpsTask@2
-  inputs:
-    project: '$(Build.SourcesDirectory)/test_xml'
-    environment: 'remote'
-    testCaseTags: '(extended, smoke)'
