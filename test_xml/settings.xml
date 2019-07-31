@@ -49,5 +49,14 @@
       <con:preemptive>true</con:preemptive>
     </con:basicAuthEntry>
   </con:authRepository>
-  <con:tags/>
+  <con:tags>
+    <con:tag>
+      <con:id>cbcf81df-91b2-4248-aa36-87e8b9d9e97f</con:id>
+      <con:name>smoke</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>49f84d0d-c21d-4721-8d5d-0d75c4ec6ff7</con:id>
+      <con:name>extended</con:name>
+    </con:tag>
+  </con:tags>
 </con:soapui-project>

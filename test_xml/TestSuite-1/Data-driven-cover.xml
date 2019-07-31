@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="3e16bf19-d9bd-4357-8cd0-450b6e6a8ba5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Data-driven cover" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3e16bf19-d9bd-4357-8cd0-450b6e6a8ba5fileName">Data-driven-cover</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="REST Request" id="97c60faa-a0b5-4708-a6f3-22a72aa86e81">
+    <con:settings/>
+    <con:config service="https://dog.ceo" resourcePath="/breed/{breed_name}/images/random" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="dcaba075-d0b1-43bd-b5e2-0f954c75c7c8" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://dog.ceo/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://dog.ceo/api/breed/hound/images/random</con:originalUri>
+        <con:assertion type="Response SLA Assertion" id="f22b0105-3fbf-43d6-8a02-506aae6ee30c" name="Response SLA">
+          <con:configuration>
+            <SLA>100</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="breed_name" value="hound" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:tagId>cbcf81df-91b2-4248-aa36-87e8b9d9e97f</con:tagId>
+</con:testCase>
