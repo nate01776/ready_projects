@@ -19,6 +19,6 @@ steps:
 
 - task: SoapUIProForAzureDevOpsTask@2
   inputs:
-    project: '$(System.ArtifactsDirectory)/test_xml'
+    project: '$(Build.SourcesDirectory)/test_xml'
     environment: 'remote'
     testCaseTags: 'smoke'
