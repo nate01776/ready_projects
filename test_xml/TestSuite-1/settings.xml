@@ -7,4 +7,9 @@
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties/>
   <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="4eede457-4662-40de-a347-18595563f086">
+      <con:authProfile>SAMPLE_AUTH</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testSuite>

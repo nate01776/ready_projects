@@ -40,6 +40,13 @@
 // pw.close()
 // fos.close()</con:script>
   </con:eventHandlers>
+  <con:environment id="4eede457-4662-40de-a347-18595563f086" name="remote">
+    <con:service type="REST" name="https://dog.ceo">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://dog.ceo/api</con:endpoint>
+    </con:service>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
   <con:authRepository>
     <con:basicAuthEntry>
       <con:name>SAMPLE_AUTH</con:name>
