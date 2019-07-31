@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="single_breed" path="/breed/{breed_name}" id="9d03782f-0158-4308-9e20-8041bdfb2e7e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9d03782f-0158-4308-9e20-8041bdfb2e7efileName">single_breed</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>breed_name</con:name>
+      <con:style>TEMPLATE</con:style>
+    </con:parameter>
+  </con:parameters>
+  <con:resource name="all_images" path="/images" id="96032696-7852-45b4-b4aa-3af4b727e712">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>breed_name</con:name>
+        <con:value>breed_name</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>breed_name</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:method name="GET" id="5c34e76e-652c-4e4a-bf7d-a7e05b7b0cf7" method="GET">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="FAULT">
+        <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+        <con:status>404</con:status>
+        <con:params/>
+        <con:element>html</con:element>
+      </con:representation>
+      <con:representation type="RESPONSE">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:imag="https://dog.ceo/api/breeds/hound/images">imag:Response</con:element>
+      </con:representation>
+      <con:request name="Request 1" id="bd312800-d7be-48c1-85cc-fcdb9bd88a1d" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://dog.ceo/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://dog.ceo/api/breeds/hound/images</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="breed_name" value="hound" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="random_image" path="/images/random" id="eae9a760-f17c-4ccd-b0b2-45a162f55ab1">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>breed_name</con:name>
+        <con:value>breed_name</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>breed_name</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:resource name="multiple" path="{image_count}" id="27cb785b-1a1c-4769-8233-344ba4101103">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="97f264f5-c865-40fb-978c-cb63ae52fc30" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>image_count</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:dog="https://dog.ceo/dog-api/">dog:Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/html;charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="aa63e926-ef61-4be9-af21-39a20f400b28" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://dog.ceo/api</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://dog.ceo/dog-api/</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="breed_name" value="hound"/>
+            <con:entry key="image_count" value="3"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>breed_name</con:entry>
+            <con:entry>image_count</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:method name="GET" id="8d6834f4-100b-42a3-8244-03f225ac7b7f" method="GET">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="RESPONSE">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:ran="https://dog.ceo/api/breed/hound/images/random">ran:Response</con:element>
+      </con:representation>
+      <con:request name="Request 1" id="dcaba075-d0b1-43bd-b5e2-0f954c75c7c8" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://dog.ceo/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://dog.ceo/api/breed/hound/images/random</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="breed_name" value="hound" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="list_subreeds" path="/list" id="57b77edd-bbf8-43cc-a208-482431a043c1">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>breed_name</con:name>
+        <con:value>breed_name</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>breed_name</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:method name="GET" id="cb8b8f7a-f860-4a19-8da1-ed4f55dabf31" method="GET">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="RESPONSE">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:list="https://dog.ceo/api/breed/hound/list">list:Response</con:element>
+      </con:representation>
+      <con:request name="Request 1" id="9d34e320-3607-4009-a2d5-404f8d3b356c" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://dog.ceo/api</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://dog.ceo/api/breed/hound/list</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="breed_name" value="hound" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="{sub_breed}" path="{sub_breed}" id="b48accab-3f63-47f9-9c3d-e157c037af9a">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>sub_breed</con:name>
+        <con:value>sub_breed</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>sub_breed</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:resource name="images" path="images" id="10cc6858-b20a-4adc-8c54-a53d14d27f93">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="random" path="random" id="564b2e55-10cf-44b5-8557-861ae8a4d824">
+        <con:settings/>
+        <con:parameters/>
+        <con:resource name="{image_count}" path="{image_count}" id="c605378d-932e-44a0-88fb-578629488e7f">
+          <con:settings/>
+          <con:parameters>
+            <con:parameter required="true">
+              <con:name>image_count</con:name>
+              <con:value>image_count</con:value>
+              <con:style>TEMPLATE</con:style>
+              <con:default>image_count</con:default>
+            </con:parameter>
+          </con:parameters>
+          <con:method name="GET" id="5a1ba866-ce34-46b5-8710-65b261ffa733" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element xmlns:ns="https://dog.ceo/api/breed/hound/afghan/images/random/3">ns:Response</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="2a7d0d61-ae1f-4818-911e-d7096566cd21" mediaType="application/json">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>https://dog.ceo/api</con:endpoint>
+              <con:request/>
+              <con:originalUri>https://dog.ceo/api/breed/hound/afghan/images/random/3</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+                <con:authType>No Authorization</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:parameters>
+                <con:entry key="breed_name" value="hound"/>
+                <con:entry key="sub_breed" value="afghan"/>
+                <con:entry key="image_count" value="3"/>
+              </con:parameters>
+              <con:environmentSpec>
+                <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                  <con:authProfile>No Authorization</con:authProfile>
+                </con:entry>
+              </con:environmentSpec>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:method name="GET" id="37ddd65d-1af1-44c1-869e-a74e8a9c4d27" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:ran="https://dog.ceo/api/breed/hound/afghan/images/random">ran:Response</con:element>
+          </con:representation>
+          <con:request name="Request 1" id="d5eb501b-fa99-407f-80fb-38bc8bb7591d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breed/hound/afghan/images/random</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="breed_name" value="hound"/>
+              <con:entry key="sub_breed" value="afghan"/>
+            </con:parameters>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:method name="GET" id="026d4381-28bc-4a80-a1b6-7d7bcffca2a1" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:imag="https://dog.ceo/api/breed/hound/afgan/images">imag:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:imag="https://dog.ceo/api/breed/hound/afgan/images">imag:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="3d15854e-04c0-451e-b716-2c652f254817" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://dog.ceo/api</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://dog.ceo/api/breed/hound/afgan/images</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="breed_name" value="hound"/>
+            <con:entry key="sub_breed" value="afghan"/>
+          </con:parameters>
+          <con:environmentSpec>
+            <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:resource>
+  <con:environmentSpec>
+    <con:entry environmentId="Default">
+      <con:authProfile>SAMPLE_AUTH</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>
