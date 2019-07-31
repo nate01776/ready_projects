@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  name: 'Default'
+
+steps:
+- task: DownloadGitHubRelease@0
+  inputs:
+    connection: 'Personal Github'
+    userRepository: 'nate01776/ready_projects'
+    defaultVersionType: 'latest'
+    downloadPath: '$(System.ArtifactsDirectory)'
+
+- task: SoapUIProForAzureDevOpsTask@2
+  inputs:
+    project: '$(System.ArtifactsDirectory)/test_xml'
+    environment: 'remote'
+    testCaseTags: 'smoke'
