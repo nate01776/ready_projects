@@ -19,7 +19,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: '/home/nw/SmartBear/ReadyAPI-2.8.2/bin/testrunner.sh -r -a -j "-f$(System.DefaultWorkingDirectory)/TestResults" "-RJUnit-Style HTML Report" -FXML "-Eremote" "$(Build.SourcesDirectory)/test_xml"'
+    script: '/home/nw/SmartBear/ReadyAPI-2.8.2/bin/testrunner.sh -r -a -j -tsmoke "-f$(System.DefaultWorkingDirectory)/TestResults" "-RJUnit-Style HTML Report" -FXML "-Eremote" "$(Build.SourcesDirectory)/test_xml"'
 
 - task: PublishTestResults@2
   condition: always()
