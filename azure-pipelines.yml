@@ -18,6 +18,7 @@ steps:
     downloadPath: '$(System.ArtifactsDirectory)'
 - task: SoapUIProForAzureDevOpsTask@2
   inputs:
+    testRunnerPath: '/home/nw/SmartBear/ReadyAPI-2.8.2/bin/testrunner.sh'
     project: '$(Build.SourcesDirectory)/test_xml'
     environment: 'remote'
     testCaseTags: 'smoke'
