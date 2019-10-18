@@ -19,7 +19,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: '/home/nw/SmartBear/ReadyAPI-2.8.2/bin/testrunner.sh -r -a -j "-f./TestResults" "-RJUnit-Style HTML Report" -FXML "-Eremote" "$(Build.SourcesDirectory)/test_xml"'
+    script: '/home/nw/SmartBear/ReadyAPI-2.8.2/bin/testrunner.sh -r -a -j "-f$(Build.SourcesDirectory)/TestResults" "-RJUnit-Style HTML Report" -FXML "-Eremote" "$(Build.SourcesDirectory)/test_xml"'
 # - task: SoapUIProForAzureDevOpsTask@2
 #   inputs:
 #     testRunnerPath: '/home/nw/SmartBear/ReadyAPI-2.8.2/bin/testrunner.sh'
