@@ -19,15 +19,10 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: '/home/nw/SmartBear/ReadyAPI-2.8.2/bin/testrunner.sh -r -a -j "-f$(Build.SourcesDirectory)/TestResults" "-RJUnit-Style HTML Report" -FXML "-Eremote" "$(Build.SourcesDirectory)/test_xml"'
-# - task: SoapUIProForAzureDevOpsTask@2
-#   inputs:
-#     testRunnerPath: '/home/nw/SmartBear/ReadyAPI-2.8.2/bin/testrunner.sh'
-#     project: '$(Build.SourcesDirectory)/test_xml'
-#     environment: 'remote'
-#     testCaseTags: 'smoke'
+    script: '/home/nw/SmartBear/ReadyAPI-2.8.2/bin/testrunner.sh -r -a -j "-f$(System.DefaultWorkingDirectory)/TestResults" "-RJUnit-Style HTML Report" -FXML "-Eremote" "$(Build.SourcesDirectory)/test_xml"'
 
 - task: PublishTestResults@2
+  condition: always()
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/*.xml'
