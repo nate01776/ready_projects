@@ -11,7 +11,6 @@ pipeline {
       steps {
         sh 'apt-get update'
         sh '((echo "Y")) | apt-get install curl'
-        sh 'curl -sL https://deb.nodesource.com/setup_10.x | -E bash -'
         sh '''apt install nodejs
 node --version
 npm --version
