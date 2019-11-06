@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites><properties><property name="testjobId" value="ec0db300-4895-4eb6-8c97-ecfb9c773c47"/><property name="status" value="FINISHED"/></properties><testsuite name="Dog_API.TestSuite 1" tests="1" failures="0" errors="0" time="4.615"><testcase name="TestCase 1" time="4.615"/></testsuite></testsuites>

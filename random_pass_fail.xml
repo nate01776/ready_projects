@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="d2b0110d-0a13-44a5-8cc0-45d2ad9884ef" created="2.7.0" activeEnvironment="Default environment" name="Dog_API" resourceRoot="" updated="2.8.0 2019-07-23T17:43:45Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="d2b0110d-0a13-44a5-8cc0-45d2ad9884ef" created="2.7.0" activeEnvironment="Default environment" name="Example Project" resourceRoot="" updated="2.7.0 2019-05-30T13:25:24Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:RestService" id="80183b82-b050-4b7b-a2cb-930bd0036cb4" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://dog.ceo" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
@@ -2496,6 +2496,14 @@ Retrives an array of book objects scoped to title or authorID.</con:description>
     <con:testCase id="a05d62f5-7d67-44a0-bf9a-2d9b06e0995f" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="groovy" name="Groovy Script" id="b3c7e581-0037-473e-960c-e4f6568b89fb">
+        <con:settings/>
+        <con:config>
+          <script>def randomValue = Math.abs(new Random().nextInt() % 500000) + 500
+
+testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
+        </con:config>
+      </con:testStep>
       <con:testStep type="datasource" name="DataSource" id="64792247-b255-4ca8-bbe6-67751853264e">
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -2512,6 +2520,7 @@ Retrives an array of book objects scoped to title or authorID.</con:description>
           <con:restartShared>true</con:restartShared>
           <con:property>breed_name</con:property>
           <con:property>some_other_data</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
           <con:restartOnRun>true</con:restartOnRun>
         </con:config>
       </con:testStep>
@@ -2531,14 +2540,24 @@ Retrives an array of book objects scoped to title or authorID.</con:description>
                 <codes>200</codes>
               </con:configuration>
             </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="b14bb7e7-04bd-4dd7-9f6a-a38cf6571b21" name="Script Assertion">
+              <con:configuration>
+                <scriptText>def randomCheck = Math.abs(new Random().nextInt() % 10) + 1
+
+if (randomCheck &lt; 5) {
+	assert true
+} else {
+	assert false
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
-              <con:entry key="breed_name" value="${DataSource#breed_name}"/>
-              <con:entry key="Auth_token" value="12309192"/>
+              <entry key="breed_name" value="corgi" xmlns="http://eviware.com/soapui/config"/>
             </con:parameters>
             <con:parameterOrder>
               <con:entry>breed_name</con:entry>
@@ -2552,48 +2571,26 @@ Retrives an array of book objects scoped to title or authorID.</con:description>
           </con:restRequest>
         </con:config>
       </con:testStep>
-      <con:testStep type="datasourceloop" name="DataSource Loop" id="29cbc5a5-15c9-4e30-bdae-e18d4cdb8dba">
+      <con:testStep type="delay" name="Delay" id="a2ff4d13-1481-4568-86aa-550f7992f7ca">
         <con:settings/>
         <con:config>
-          <dataSourceStep>DataSource</dataSourceStep>
-          <targetStep>GET - Request 1</targetStep>
-          <discardResults>true</discardResults>
+          <delay>${#TestCase#waitTime}</delay>
         </con:config>
       </con:testStep>
-      <con:testStep type="restrequest" name="Step Name" id="98bf90d6-95a6-400f-b211-2fc5cb775dc7">
-        <con:settings/>
-        <con:config service="Darth Library" resourcePath="/books/{id}" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="Step Name" id="25f020a0-c1e2-4e3d-91a1-3c07e99ff874" mediaType="application/json">
-            <con:settings>
-              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-            </con:settings>
-            <con:endpoint>https://virtserver.swaggerhub.com</con:endpoint>
-            <con:request/>
-            <con:originalUri>https://api.swaggerhub.com/books/</con:originalUri>
-            <con:assertion type="Valid HTTP Status Codes" id="14a916a0-8d56-4fd4-932c-cec276df8f63" name="Valid HTTP Status Codes">
-              <con:settings/>
-              <con:configuration>
-                <codes>200</codes>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="Response SLA Assertion" id="c6faf62a-7dd0-4a6f-8851-e75daf4edb3b" name="Response SLA">
-              <con:configuration>
-                <SLA>200</SLA>
-              </con:configuration>
-            </con:assertion>
-            <con:credentials>
-              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-              <con:authType>No Authorization</con:authType>
-            </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:parameters/>
-          </con:restRequest>
-        </con:config>
-      </con:testStep>
-      <con:properties/>
+      <con:properties>
+        <con:property>
+          <con:name>waitTime</con:name>
+          <con:value>3373763</con:value>
+        </con:property>
+      </con:properties>
       <con:reportParameters/>
       <con:breakPoints>
-        <con:testStepId>29cbc5a5-15c9-4e30-bdae-e18d4cdb8dba</con:testStepId>
+        <con:testStepId>a2ff4d13-1481-4568-86aa-550f7992f7ca</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b3c7e581-0037-473e-960c-e4f6568b89fb</con:testStepId>
         <con:status>NONE</con:status>
         <con:properties/>
       </con:breakPoints>
@@ -2601,6 +2598,217 @@ Retrives an array of book objects scoped to title or authorID.</con:description>
     <con:properties/>
     <con:reportParameters/>
   </con:testSuite>
+  <con:restMockService id="0a545e5f-5bc3-4110-9fc8-3df340531758" port="8088" path="/" host="localhost" name="https://dog.ceo Virtual Service" routeModeEnabled="true">
+    <con:settings/>
+    <con:properties/>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:virtError>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:headerValidator type="NONE"/>
+    <con:restMockAction name="/breeds" method="GET" resourcePath="/breeds" id="a68319cb-96f7-447c-b8a5-8e709644884e">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="148f8a38-b383-471e-8bda-4d0bd85bb816" httpResponseStatus="200" dataSource="">
+        <con:settings/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breeds/list/all" method="GET" resourcePath="/breeds/list/all" id="26107866-cc34-41b7-8fc2-8f11ad11e04d">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="cb787eea-ca1c-4435-a365-a08f6fdfb943" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+      <con:response name="Response 2" id="12a5d6c8-f331-424d-9148-183fee76904c" httpResponseStatus="0" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breeds/image/random" method="GET" resourcePath="/breeds/image/random" id="296d99a6-acdc-45b0-ab24-b80d97ae8095">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="877b29f6-e064-49ad-ba31-30e65dca540c" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}" method="GET" resourcePath="/breed/{breed_name}" id="2dc26061-e78d-415d-b445-db2223c1452b">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="a6d82d23-948c-4675-bf72-8e382301cd56" httpResponseStatus="200" dataSource="">
+        <con:settings/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/images" method="GET" resourcePath="/breed/{breed_name}/images" id="68454825-38c7-438c-8f69-877f42bcd0b3">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="31acf6bb-98ca-4bcc-b8eb-c13f605c6254" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/images/random" method="GET" resourcePath="/breed/{breed_name}/images/random" id="024f1823-2a66-40ca-a2a3-8fa175fadeef">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="c55a2832-dfa5-41e5-8cba-303a64bc1500" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/images/random/{image_count}" method="GET" resourcePath="/breed/{breed_name}/images/random/{image_count}" id="45b7dcea-bb69-4979-b7f4-827362f067c6">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="489925b2-b3ad-49cc-a417-176185ab44e2" httpResponseStatus="200" mediaType="text/html" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+      <con:response name="Response 2" id="d00d578c-a7b8-4a3c-8947-bc949ca44d18" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+      <con:response name="Response 3" id="340d4b54-a108-4c48-a10d-e0023824c685" httpResponseStatus="200" mediaType="text/html" encoding="utf-8" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/list" method="GET" resourcePath="/breed/{breed_name}/list" id="ce2ccbe4-7b00-4696-bdb1-c677e6ccd6c3">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="3f335703-606f-4773-8d06-8d410931471f" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/{sub_breed}" method="GET" resourcePath="/breed/{breed_name}/{sub_breed}" id="e5d5af3e-4234-4317-8d08-d1938e7bcfbf">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="cfbe724e-2725-4034-a455-933abce03b2c" httpResponseStatus="200" dataSource="">
+        <con:settings/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/{sub_breed}/images" method="GET" resourcePath="/breed/{breed_name}/{sub_breed}/images" id="038e02d9-d87c-4902-bed1-f97fac0cc7ed">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="cfb72639-0897-44a1-b597-a75472fa6721" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/{sub_breed}/images/random" method="GET" resourcePath="/breed/{breed_name}/{sub_breed}/images/random" id="a7318dfc-c1cb-4282-937f-bea00a90b148">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="d798fb38-eb0a-4c57-820b-9121660b6625" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/{sub_breed}/images/random/{image_count}" method="GET" resourcePath="/breed/{breed_name}/{sub_breed}/images/random/{image_count}" id="eda87e91-f03a-4700-8ee2-f142dbfcdfcd">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="74c089e0-911b-46ba-bb34-8e742c088dbe" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+  </con:restMockService>
+  <con:restMockService id="25917067-0615-4ad9-be61-d204790da71d" port="8081" path="/" host="localhost" name="REST Virtual Service 1" routeModeEnabled="true" routeUnmatchedOperation="false" addUnmatchedOperation="false" routeEndpoint="http://localhost:8088">
+    <con:settings/>
+    <con:properties/>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:virtError>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:headerValidator type="NONE"/>
+    <con:restMockAction name="/status" method="GET" resourcePath="/status" id="8f0c6e72-09bf-48c2-8797-7e3c44b317c1">
+      <con:settings/>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeEnabled>true</con:routeEnabled>
+      <con:conditionalRoutingEnabled>true</con:conditionalRoutingEnabled>
+      <con:routeScript>//Route Based on Service Availability
+
+// Capture incoming request parameters, can also capture payloads, headers, etc.
+def incomingRequest = mockRequest.httpRequest
+def path = mockRequest.path
+def query = mockRequest.queryString
+def method = mockRequest.method
+
+// Define Route of Service to check, ideally this would be parameterized.
+def route = "http://10.1.2.194:8086"
+
+// Build Check Request based on incoming Request Parameters
+def url = new URL(route + path.toString() + '?' + query.toString()) 
+
+log.info("Routing " + incomingRequest + " to " + route + path.toString() + '?' + query.toString())
+
+// Send Check Request
+HttpURLConnection connection = (HttpURLConnection) url.openConnection()
+connection.setRequestMethod("GET")
+// connection.setConnectTimeout(10000)
+connection.connect()
+log.info(connection.responseCode)
+log.info(connection)
+if (connection.responseCode == 200 || connection.responseCode == 201) {
+    // Route to Service if response code conditions are met.
+    return true
+} else {
+    // Route to Virtual Service if response code conditions are not met.
+    return false
+}</con:routeScript>
+    </con:restMockAction>
+  </con:restMockService>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:requirements/>
   <con:properties>
