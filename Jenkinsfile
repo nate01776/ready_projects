@@ -24,19 +24,19 @@ pipeline {
 
     stage('Test') {
       parallel {
-        stage('Test') {
+        stage('regression') {
           steps {
             sh 'testengine --version'
           }
         }
 
-        stage('Test_2') {
+        stage('smoke') {
           steps {
             sh 'testengine --version'
           }
         }
 
-        stage('Test_3') {
+        stage('functional') {
           steps {
             sh 'testengine --version'
           }
