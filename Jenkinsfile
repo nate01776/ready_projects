@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'npm install -g testengine-cli'
-        sh 'testengine -v'
+        sh 'testengine --version'
         sh 'ls'
       }
     }
