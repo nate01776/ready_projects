@@ -17,8 +17,13 @@ steps:
     defaultVersionType: 'latest'
     downloadPath: '$(System.ArtifactsDirectory)'
 
-- task: SoapUIProForAzureDevOpsTask@2
+- task: CmdLine@2
   inputs:
-    project: '$(Build.SourcesDirectory)/test_xml'
-    environment: 'remote'
-    testCaseTags: 'smoke'
+    script: '/home/nw/SmartBear/ReadyAPI-2.8.2/bin/testrunner.sh -r -a -j -tsmoke "-f$(System.DefaultWorkingDirectory)/TestResults" "-RJUnit-Style HTML Report" -FXML "-Eremote" "$(Build.SourcesDirectory)/test_xml"'
+
+- task: PublishTestResults@2
+  condition: always()
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/*.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/TestResults'
