@@ -31,7 +31,7 @@ pipeline {
     stage('Archive Results') {
       steps {
         sh 'ls ./results'
-        junit './results/*.xml'
+        junit(testResults: './results/*.xml', allowEmptyResults: true)
       }
     }
 
