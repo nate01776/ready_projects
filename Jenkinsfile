@@ -10,19 +10,44 @@ pipeline {
     stage('Build') {
       steps {
         sh 'apk add --update nodejs npm'
-        sh '''node --version
-npm --version
-'''
+        sh 'node --version'
+        sh 'npm --version'
         sh 'npm install -g testengine-cli'
-        sh 'testengine --version'
+      }
+    }
+
+    stage('Stage') {
+      steps {
         sh 'ls'
       }
     }
 
     stage('Test') {
+      parallel {
+        stage('Test') {
+          steps {
+            sh 'testengine --version'
+          }
+        }
+
+        stage('Test_2') {
+          steps {
+            sh 'testengine --version'
+          }
+        }
+
+        stage('Test_3') {
+          steps {
+            sh 'testengine --version'
+          }
+        }
+
+      }
+    }
+
+    stage('Deploy') {
       steps {
-        sh 'ls'
-        sh 'testengine --version'
+        echo 'Deploy!'
       }
     }
 
