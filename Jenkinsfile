@@ -22,7 +22,7 @@ pipeline {
       }
     }
 
-    stage('Test') {
+    stage('Run Tests') {
       parallel {
         stage('Suite A') {
           steps {
@@ -45,10 +45,15 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
+    stage('Archive Results') {
       steps {
         junit 'results/*.xml'
-        input 'Deploy to Production?'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        input(message: 'Push to Production?', ok: 'Deploy')
       }
     }
 
