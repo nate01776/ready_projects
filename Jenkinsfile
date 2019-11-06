@@ -9,10 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'apt-get update'
-        sh '''((echo "Y")) | apt install nodejs
-((echo "Y")) | apt install npm
-node --version
+        sh 'apk add --update nodejs npm'
+        sh '''node --version
 npm --version
 '''
         sh 'npm install -g testengine-cli'
