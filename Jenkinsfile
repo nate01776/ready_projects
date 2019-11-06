@@ -26,10 +26,7 @@ pipeline {
       parallel {
         stage('regression') {
           steps {
-            sh '''testengine -c ./testengine.conf \\
-output=./results \\
-format=junit \\
-run project ./random_pass_fail.xml'''
+            sh 'testengine -c ./testengine.conf output=./results format=junit run project ./random_pass_fail.xml'
           }
         }
 
