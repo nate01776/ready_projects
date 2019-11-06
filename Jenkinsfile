@@ -9,11 +9,11 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'npm install -g testengine-cli'
         sh '''apt-get install
 apt-get install node-js
 apt-get update
 '''
+        sh 'npm install -g testengine-cli'
         sh 'ls'
       }
     }
