@@ -26,19 +26,34 @@ pipeline {
       parallel {
         stage('Suite A') {
           steps {
-            sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
+            sh '''testengine -c ./testengine.conf \\
+run project \\
+testsuite="TestSuite A"
+output=./results \\
+format=junit \\
+./random_pass_fail.xml'''
           }
         }
 
         stage('Suite B') {
           steps {
-            sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
+            sh '''testengine -c ./testengine.conf \\
+run project \\
+testsuite="TestSuite B"
+output=./results \\
+format=junit \\
+./random_pass_fail.xml'''
           }
         }
 
         stage('Suite C') {
           steps {
-            sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
+            sh '''testengine -c ./testengine.conf \\
+run project \\
+testsuite="TestSuite C"
+output=./results \\
+format=junit \\
+./random_pass_fail.xml'''
           }
         }
 
