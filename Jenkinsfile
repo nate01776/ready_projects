@@ -22,26 +22,9 @@ pipeline {
       }
     }
 
-    stage('Test') {
-      parallel {
-        stage('regression') {
-          steps {
-            sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
-          }
-        }
-
-        stage('smoke') {
-          steps {
-            sh 'testengine -c ./testengine.conf run project ./random_pass_fail.xml'
-          }
-        }
-
-        stage('functional') {
-          steps {
-            sh 'testengine -c ./testengine.conf run project ./random_pass_fail.xml'
-          }
-        }
-
+    stage('regression') {
+      steps {
+        sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
       }
     }
 
