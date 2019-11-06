@@ -28,9 +28,4 @@ pipeline {
       }
     }
   }
-  post {
-    always {
-      junit 'build/results/*.xml'
-    }
-  }
 }
