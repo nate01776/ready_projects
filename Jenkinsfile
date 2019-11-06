@@ -18,9 +18,7 @@ pipeline {
 
     stage('Stage') {
       steps {
-        sh '''mkdir results/A
-mkdir results/B
-mkdir results/C'''
+        sh 'mkdir ./results && mkdir ./results/A'
       }
     }
 
