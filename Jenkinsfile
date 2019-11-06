@@ -15,6 +15,7 @@ npm --version
 '''
         sh 'npm install -g testengine-cli'
         sh 'testengine --version'
+        sh 'ls'
       }
     }
 
