@@ -23,11 +23,34 @@ pipeline {
     }
 
     stage('Test') {
+      parallel {
+        stage('Suite A') {
+          steps {
+            sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
+            junit 'results/*.xml'
+          }
+        }
+
+        stage('Suite B') {
+          steps {
+            sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
+            junit 'results/*.xml'
+          }
+        }
+
+        stage('Suite C') {
+          steps {
+            sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
+            junit 'results/*.xml'
+          }
+        }
+
+      }
+    }
+
+    stage('Deploy') {
       steps {
-        sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
-        sh 'ls results'
-        archiveArtifacts(artifacts: 'results/*.xml', allowEmptyArchive: true)
-        junit 'results/*.xml'
+        input 'Deploy to Production?'
       }
     }
 
