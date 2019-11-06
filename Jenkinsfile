@@ -22,32 +22,21 @@ pipeline {
       }
     }
 
-    stage('Test') {
-      parallel {
-        stage('regression') {
-          steps {
-            sh 'testengine -c ./testengine.conf run project ./random_pass_fail.xml'
-          }
-        }
+    stage('regression') {
+      steps {
+        sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
+      }
+    }
 
-        stage('smoke') {
-          steps {
-            sh 'testengine --version'
-          }
-        }
-
-        stage('functional') {
-          steps {
-            sh 'testengine --version'
-          }
-        }
-
+    stage('Archive Results') {
+      steps {
+        junit './results/*.xml'
       }
     }
 
     stage('Deploy') {
       steps {
-        echo 'Deploy!'
+        echo 'Hello, world!'
       }
     }
 
