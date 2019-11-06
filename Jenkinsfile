@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh 'apt-get update'
         sh '((echo "Y")) | apt-get install curl'
-        sh '''apt install nodejs
+        sh '''((echo "Y")) | apt install nodejs
 node --version
 npm --version
 '''
