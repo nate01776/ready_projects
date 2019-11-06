@@ -26,7 +26,7 @@ pipeline {
       parallel {
         stage('regression') {
           steps {
-            sh 'testengine --version'
+            sh 'testengine -c ./testengine.conf run project ./random_pass_fail.xml'
           }
         }
 
