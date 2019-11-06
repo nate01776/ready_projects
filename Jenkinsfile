@@ -27,18 +27,10 @@ pipeline {
         sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
       }
     }
-
-    stage('Archive Results') {
-      steps {
-        junit './results/*.xml'
-      }
+  }
+  post {
+    always {
+      junit './results/*.xml'
     }
-
-    stage('Deploy') {
-      steps {
-        echo 'Hello, world!'
-      }
-    }
-
   }
 }
