@@ -32,13 +32,13 @@ pipeline {
 
         stage('smoke') {
           steps {
-            sh 'testengine --version'
+            sh 'testengine -c ./testengine.conf run project ./random_pass_fail.xml'
           }
         }
 
         stage('functional') {
           steps {
-            sh 'testengine --version'
+            sh 'testengine -c ./testengine.conf run project ./random_pass_fail.xml'
           }
         }
 
