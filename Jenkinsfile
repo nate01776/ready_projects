@@ -50,7 +50,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        input(message: 'Push to Production?', ok: 'Deploy')
+        echo 'Deployed'
       }
     }
 
