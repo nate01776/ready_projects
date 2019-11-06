@@ -45,9 +45,15 @@ pipeline {
       }
     }
 
+    stage('Archive Results') {
+      steps {
+        junit './results/*.xml'
+      }
+    }
+
     stage('Deploy') {
       steps {
-        echo 'Deploy!'
+        echo 'Hello, world!'
       }
     }
 
