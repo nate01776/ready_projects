@@ -2499,7 +2499,7 @@ Retrives an array of book objects scoped to title or authorID.</con:description>
       <con:testStep type="groovy" name="Groovy Script" id="b3c7e581-0037-473e-960c-e4f6568b89fb">
         <con:settings/>
         <con:config>
-          <script>def randomValue = Math.abs(new Random().nextInt() % 500) + 500
+          <script>def randomValue = Math.abs(new Random().nextInt() % 50000) + 500
 
 testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
         </con:config>
@@ -2650,7 +2650,7 @@ testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script
                 <codes>200</codes>
               </con:configuration>
             </con:assertion>
-            <con:assertion type="GroovyScriptAssertion" id="b14bb7e7-04bd-4dd7-9f6a-a38cf6571b21" name="Script Assertion" disabled="true">
+            <con:assertion type="GroovyScriptAssertion" id="b14bb7e7-04bd-4dd7-9f6a-a38cf6571b21" name="Script Assertion">
               <con:configuration>
                 <scriptText>def randomCheck = Math.abs(new Random().nextInt() % 10) + 1
 
