@@ -30,7 +30,7 @@ pipeline {
 
     stage('Archive Results') {
       steps {
-        sh 'ls'
+        sh 'ls ./results'
         junit './results/*.xml'
       }
     }
