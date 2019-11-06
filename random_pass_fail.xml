@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="d2b0110d-0a13-44a5-8cc0-45d2ad9884ef" created="2.7.0" activeEnvironment="Default environment" name="Example Project" resourceRoot="" updated="2.7.0 2019-05-30T13:25:24Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="d2b0110d-0a13-44a5-8cc0-45d2ad9884ef" created="2.7.0" activeEnvironment="Default environment" name="Example Project" resourceRoot="" updated="2.8.0 2019-07-23T17:43:45Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:RestService" id="80183b82-b050-4b7b-a2cb-930bd0036cb4" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://dog.ceo" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
@@ -2499,7 +2499,7 @@ Retrives an array of book objects scoped to title or authorID.</con:description>
       <con:testStep type="groovy" name="Groovy Script" id="b3c7e581-0037-473e-960c-e4f6568b89fb">
         <con:settings/>
         <con:config>
-          <script>def randomValue = Math.abs(new Random().nextInt() % 500000) + 500
+          <script>def randomValue = Math.abs(new Random().nextInt() % 500) + 500
 
 testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
         </con:config>
@@ -2580,7 +2580,7 @@ if (randomCheck &lt; 5) {
       <con:properties>
         <con:property>
           <con:name>waitTime</con:name>
-          <con:value>3373763</con:value>
+          <con:value>619</con:value>
         </con:property>
       </con:properties>
       <con:reportParameters/>
