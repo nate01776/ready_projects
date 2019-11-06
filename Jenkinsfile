@@ -19,5 +19,12 @@ npm --version
       }
     }
 
+    stage('Test') {
+      steps {
+        sh 'ls'
+        sh 'testengine --version'
+      }
+    }
+
   }
 }
