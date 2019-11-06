@@ -48,6 +48,7 @@ pipeline {
     stage('Archive Results') {
       steps {
         junit 'results/*.xml'
+        catchError()
       }
     }
 
