@@ -26,7 +26,7 @@ pipeline {
       steps {
         sh 'testengine -c ./testengine.conf run project output=./results format=junit ./random_pass_fail.xml'
         sh 'ls ./results'
-        junit './results/*.xml'
+        junit './results'
       }
     }
 
