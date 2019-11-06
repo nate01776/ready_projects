@@ -2489,7 +2489,7 @@ Retrives an array of book objects scoped to title or authorID.</con:description>
       </con:method>
     </con:resource>
   </con:interface>
-  <con:testSuite id="8e05268e-35b0-4021-860b-df22e10ca731" name="TestSuite 1" authProfile="SAMPLE_AUTH">
+  <con:testSuite id="8e05268e-35b0-4021-860b-df22e10ca731" name="TestSuite A" authProfile="SAMPLE_AUTH">
     <con:settings/>
     <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
@@ -2547,6 +2547,7 @@ testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script
 if (randomCheck &lt; 5) {
 	assert true
 } else {
+	log.info(messageExchange.response.getContentAsString())
 	assert false
 }</scriptText>
               </con:configuration>
@@ -2572,6 +2573,226 @@ if (randomCheck &lt; 5) {
         </con:config>
       </con:testStep>
       <con:testStep type="delay" name="Delay" id="a2ff4d13-1481-4568-86aa-550f7992f7ca">
+        <con:settings/>
+        <con:config>
+          <delay>${#TestCase#waitTime}</delay>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>waitTime</con:name>
+          <con:value>619</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a2ff4d13-1481-4568-86aa-550f7992f7ca</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b3c7e581-0037-473e-960c-e4f6568b89fb</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="34644014-2206-49b2-818d-7f95294a5d32" name="TestSuite B" authProfile="SAMPLE_AUTH">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="86a1e18b-d7e0-4df4-a306-f8ef4f4f5c52" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="groovy" name="Groovy Script" id="57111d2d-9c69-458b-9d7a-24e7809d1c25">
+        <con:settings/>
+        <con:config>
+          <script>def randomValue = Math.abs(new Random().nextInt() % 5000) + 500
+
+testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="a76e80c0-d7e1-433c-8efe-0a97057a5052">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Grid">
+            <con:configuration>
+              <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry></xml-fragment>]]></check>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">hound</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">1</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">corgi</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">2</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">bulldog</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">3</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <recognizeAsPlainText>true</recognizeAsPlainText>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>breed_name</con:property>
+          <con:property>some_other_data</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET - Request 1" id="bae49f6f-cdce-4976-9184-631cb2fa1c2c">
+        <con:settings/>
+        <con:config service="https://dog.ceo" resourcePath="/breed/{breed_name}/images/random" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET - Request 1" id="dcaba075-d0b1-43bd-b5e2-0f954c75c7c8" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breed/hound/images/random</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="72885ae6-f3b9-4f7e-981f-93e4fbf459f2" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="b14bb7e7-04bd-4dd7-9f6a-a38cf6571b21" name="Script Assertion" disabled="true">
+              <con:configuration>
+                <scriptText>def randomCheck = Math.abs(new Random().nextInt() % 10) + 1
+
+if (randomCheck &lt; 5) {
+	assert true
+} else {
+	log.info(messageExchange.response.getContentAsString())
+	assert false
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <entry key="breed_name" value="corgi" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>breed_name</con:entry>
+              <con:entry>Auth_token</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Delay" id="072bfbeb-be6a-449a-b595-99ecfeb86a65">
+        <con:settings/>
+        <con:config>
+          <delay>${#TestCase#waitTime}</delay>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>waitTime</con:name>
+          <con:value>619</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a2ff4d13-1481-4568-86aa-550f7992f7ca</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b3c7e581-0037-473e-960c-e4f6568b89fb</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="3e19b313-bd2e-4f3a-93ba-e613a9b1ea37" name="TestSuite C" authProfile="SAMPLE_AUTH">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="2bcd8730-b070-4b28-8616-11e05eb915a1" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="groovy" name="Groovy Script" id="cf041584-7610-47ac-bb5f-4e954aae32ad">
+        <con:settings/>
+        <con:config>
+          <script>def randomValue = Math.abs(new Random().nextInt() % 5000) + 500
+
+testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="a8a0fa91-b065-4197-9b11-65a8787c7d8c">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Grid">
+            <con:configuration>
+              <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry></xml-fragment>]]></check>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">hound</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">1</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">corgi</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">2</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">bulldog</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">3</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <recognizeAsPlainText>true</recognizeAsPlainText>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>breed_name</con:property>
+          <con:property>some_other_data</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET - Request 1" id="ec4b5dc9-a8f4-4917-9c41-fa8d08ea03c8">
+        <con:settings/>
+        <con:config service="https://dog.ceo" resourcePath="/breed/{breed_name}/images/random" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET - Request 1" id="dcaba075-d0b1-43bd-b5e2-0f954c75c7c8" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breed/hound/images/random</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="72885ae6-f3b9-4f7e-981f-93e4fbf459f2" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="b14bb7e7-04bd-4dd7-9f6a-a38cf6571b21" name="Script Assertion">
+              <con:configuration>
+                <scriptText>def randomCheck = Math.abs(new Random().nextInt() % 10) + 1
+
+if (randomCheck &lt; 5) {
+	assert true
+} else {
+	log.info(messageExchange.response.getContentAsString())
+	assert false
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <entry key="breed_name" value="corgi" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>breed_name</con:entry>
+              <con:entry>Auth_token</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Delay" id="04929f41-cb25-4f27-8ba6-30773864f286">
         <con:settings/>
         <con:config>
           <delay>${#TestCase#waitTime}</delay>
