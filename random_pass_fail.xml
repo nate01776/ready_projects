@@ -587,13 +587,18 @@ POSTs a book object to our DB.</con:description>
   "message" : "There is a great disturbance in the server."
 }</con:sampleContent>
         </con:representation>
-        <con:request name="Request 1" id="74238501-4a5d-4e02-b4b9-a50d1ad93db4" mediaType="application/json">
-          <con:settings/>
+        <con:request name="Request 1" id="74238501-4a5d-4e02-b4b9-a50d1ad93db4" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
           <con:endpoint>https://api.swaggerhub.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://api.swaggerhub.com/books</con:originalUri>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
         </con:request>
       </con:method>
@@ -2499,7 +2504,7 @@ Retrives an array of book objects scoped to title or authorID.</con:description>
       <con:testStep type="groovy" name="Groovy Script" id="b3c7e581-0037-473e-960c-e4f6568b89fb">
         <con:settings/>
         <con:config>
-          <script>def randomValue = Math.abs(new Random().nextInt() % 50000) + 500
+          <script>def randomValue = Math.abs(new Random().nextInt() % 500000) + 500
 
 testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
         </con:config>
@@ -2542,13 +2547,12 @@ testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script
             </con:assertion>
             <con:assertion type="GroovyScriptAssertion" id="b14bb7e7-04bd-4dd7-9f6a-a38cf6571b21" name="Script Assertion">
               <con:configuration>
-                <scriptText>def randomCheck = Math.abs(new Random().nextInt() % 10) + 1
+                <scriptText>def randomCheck = 4
 
 if (randomCheck &lt; 5) {
 	assert true
 } else {
-	log.info(messageExchange.response.getContentAsString())
-	assert false
+	assert false : messageExchange.response.contentAsString
 }</scriptText>
               </con:configuration>
             </con:assertion>
@@ -2657,8 +2661,7 @@ testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script
 if (randomCheck &lt; 5) {
 	assert true
 } else {
-	log.info(messageExchange.response.getContentAsString())
-	assert false
+	assert false : messageExchange.response.contentAsString
 }</scriptText>
               </con:configuration>
             </con:assertion>
@@ -2767,8 +2770,7 @@ testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script
 if (randomCheck &lt; 5) {
 	assert true
 } else {
-	log.info(messageExchange.response.getContentAsString())
-	assert false
+	assert false : messageExchange.response.contentAsString
 }</scriptText>
               </con:configuration>
             </con:assertion>
@@ -3062,7 +3064,9 @@ if (connection.responseCode == 200 || connection.responseCode == 201) {
 // if (headers.containsKey('auth_token2') == false) {
 //   headers.put('auth_token2', token)
 //   request.requestHeaders = headers
-// }</con:script>
+// }
+
+log.info(request.requestContent)</con:script>
   </con:eventHandlers>
   <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
     <con:script>// Save all test step results into files
