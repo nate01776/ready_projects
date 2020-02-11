@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:restMockAction name="/authors" method="POST" resourcePath="/authors" id="79019e14-79ae-4fcd-b927-2dbbfb5ae98c" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="79019e14-79ae-4fcd-b927-2dbbfb5ae98cfileName">%2Fauthors-1-2-3</con:setting>
+    <con:setting id="79019e14-79ae-4fcd-b927-2dbbfb5ae98cfileName">%2Fauthors-1-2</con:setting>
   </con:settings>
   <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
   <con:dispatchConfig/>

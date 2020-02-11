@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:restMockAction name="/books" method="POST" resourcePath="/books" id="50d49679-6479-4303-9b0f-0204db166c8a" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="50d49679-6479-4303-9b0f-0204db166c8afileName">%2Fbooks-1-2-3</con:setting>
+    <con:setting id="50d49679-6479-4303-9b0f-0204db166c8afileName">%2Fbooks-1-2</con:setting>
   </con:settings>
   <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
   <con:dispatchConfig/>
