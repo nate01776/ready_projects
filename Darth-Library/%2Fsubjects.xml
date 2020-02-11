@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/subjects" path="/subjects" id="724dfc00-9e77-4b61-890d-f7bda6661c1f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="724dfc00-9e77-4b61-890d-f7bda6661c1ffileName">%2Fsubjects</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="22902ecb-651c-4fff-9102-64f5e63c5a99" method="GET">
+    <con:description>This resource is used to search our book database, and retrieve a set of objects related to your query. If there are no objects to return, the API will still return a 200 Status, but the "results" set will be an empty array and should be accounted for something else that is here.
+Retrives an array of book objects scoped to title or authorID.</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>title</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Title string to query. API will return both whole and partial matches dependent on the *fullMatch* parameter.</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>fullMatch</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>boolean</con:dataType>
+        <con:description>Boolean value of whether or not to return and exact match to the title query string.</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>authorID</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>ID of author to retrieve related books. Similar functionality can be found by querying */authors/{id}/books* if that level is desired.</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 200,
+  "results" : [ {
+    "id" : "66",
+    "title" : "The Tragedy of Darth Plagueis the Wise",
+    "author_id" : 254,
+    "_link" : "/books/66"
+  }, {
+    "id" : "67",
+    "title" : "Lord Vader: A Story of Rebirth",
+    "author_id" : 387,
+    "_link" : "/books/67"
+  }, {
+    "id" : "68",
+    "title" : "Constructing Your First Lightsaber - A Beginners Guide",
+    "author_id" : 89,
+    "_link" : "/books/68"
+  }, {
+    "id" : "69",
+    "title" : "The Power of the Dark Side",
+    "author_id" : 387,
+    "_link" : "/books/69"
+  } ]
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="5e4053bc-f6fd-4bae-b42f-a330373c2aa0" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/books/{id}" path="/books/{id}" id="3f18bca3-bac2-483c-a1b5-e73ccdc0acd9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3f18bca3-bac2-483c-a1b5-e73ccdc0acd9fileName">%2Fbooks%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:style>TEMPLATE</con:style>
+      <con:dataType>string</con:dataType>
+      <con:description>Book ID to update</con:description>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="GET" id="d111612e-1031-4b39-949d-7782f8e6b0c0" method="GET">
+    <con:description>Returns single book object based on ID
+GETs a single book object.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 66,
+    "title" : "The Tragedy of Darth Plagueis the Wise",
+    "description" : "Not a story the Jedi would tell you",
+    "author" : {
+      "id" : 254,
+      "first_name" : "Darth",
+      "last_name" : "Sidious",
+      "_link" : "/authors/254"
+    },
+    "_link" : "/books/66"
+  }
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="063b7c30-8dea-419e-921b-9ae4e01b8cf4" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://localhost/books/15</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value="17"/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="8abcce85-e620-4d65-b08d-638cf7a1773c" method="DELETE">
+    <con:description>Deletes a created book based by ID - does not support name. Returns deleted object.
+DELETEs book object</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "id" : 66,
+  "title" : "The Tragedy of Darth Plagueis the Wise",
+  "description" : "Not a story the Jedi would tell you",
+  "author" : {
+    "id" : 254,
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  },
+  "_link" : "/books/66"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="d57dca34-ba8c-4335-b1f9-f7b228552552" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="212bef04-54ab-4ead-85cf-5b7d6be59985" method="PATCH">
+    <con:description>Updates a created book based by ID - does not support name. Returns deleted object.
+PATCHs book object</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "id" : 66,
+  "title" : "The Tragedy of Darth Plagueis the Wise",
+  "description" : "Not a story the Jedi would tell you",
+  "author" : {
+    "id" : 254,
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  },
+  "_link" : "/books/66"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="0554e461-8ad8-4959-9885-f4c563e5c5a3" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

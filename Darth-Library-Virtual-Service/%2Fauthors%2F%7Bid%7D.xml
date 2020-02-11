@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/authors/{id}" method="GET" resourcePath="/authors/{id}" id="980bea76-8495-45f2-bfac-fc2cb396edf0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="980bea76-8495-45f2-bfac-fc2cb396edf0fileName">%2Fauthors%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="9b439ee4-4ae9-4768-bf4b-5bdd9ed8cac3" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 254,
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  }
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 2" id="df70243e-a3bd-4bed-81c1-7e290d39adce" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 3" id="1cf6c557-0e31-42a4-a933-0b1c811c8524" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+  </con:response>
+</con:restMockAction>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/authors" method="GET" resourcePath="/authors" id="f2cdc3ad-2b1e-4353-ba29-68292e1e285e" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f2cdc3ad-2b1e-4353-ba29-68292e1e285efileName">%2Fauthors</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="4f547c6b-1c73-49c7-a260-22b068c5489b" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 200,
+  "results" : [ {
+    "id" : "254",
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  }, {
+    "id" : "255",
+    "first_name" : "Wilhuff",
+    "last_name" : "Tarkin",
+    "_link" : "/authors/255"
+  }, {
+    "id" : "256",
+    "first_name" : "Orson",
+    "last_name" : "Krennic",
+    "_link" : "/authors/256"
+  } ]
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 2" id="8d1a2069-3f47-4807-81b6-3fb0da336d03" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 3" id="7b22ead9-29b3-4961-b043-706b66fb15d2" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+  </con:response>
+</con:restMockAction>

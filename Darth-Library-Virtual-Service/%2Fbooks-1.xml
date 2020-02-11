@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/books" method="POST" resourcePath="/books" id="50d49679-6479-4303-9b0f-0204db166c8a" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="50d49679-6479-4303-9b0f-0204db166c8afileName">%2Fbooks-1</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="24267d53-d77a-45b1-81f0-0090dca197c8" httpResponseStatus="201" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "id" : 66,
+  "title" : "The Tragedy of Darth Plagueis the Wise",
+  "description" : "Not a story the Jedi would tell you",
+  "author" : {
+    "id" : 254,
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  },
+  "_link" : "/books/66"
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 2" id="f3ea3738-7733-409b-9ff8-dfd488f9e7dc" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 3" id="81d67808-4086-4c9f-b8f8-73e450d906ed" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+  </con:response>
+</con:restMockAction>

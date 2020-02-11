@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/searchTimeSlot/{searchTimeSlotId}" path="/searchTimeSlot/{searchTimeSlotId}" id="b5853749-ff2a-4971-ab8d-838839c691c6" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b5853749-ff2a-4971-ab8d-838839c691c6fileName">%2FsearchTimeSlot%2F%7BsearchTimeSlotId%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>searchTimeSlotId</con:name>
+      <con:style>TEMPLATE</con:style>
+      <con:description>Unique identifier of the search time slot request</con:description>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="searchTimeSlotGet" id="cb671362-2500-41d4-9e50-e7ad7bfeb6a5" method="GET">
+    <con:description>This operation retrieves a search time slot entity.
+Attribute selection is enabled for all first level attributes.
+Filtering on sub-resources may be available depending on the compliance level supported by an implementation.
+Note: A specific implementation of the Appointment Management API can choose whether or not to implement GET, PATCH, and DELETE for the SearchTimeSlot task resource, according to business considerations (such as the need for accounting or the need to support asynchronous search).
+
+Specific business errors for current operation will be encapsulated in
+
+HTTP Response 422 Unprocessable entity
+
+Retrieve a search time slot</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>fields</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Attribute selection</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>405</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>422</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:request name="Request 1" id="3929c8ee-8e83-4d5c-9b06-f733e379c3aa" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://serverRoot</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="searchTimeSlotDelete" id="c59ae04b-2e87-4d8d-a299-c593bf767582" method="DELETE">
+    <con:description>This operation deletes a search time slot entity. 
+Note: this operation is available only to ADMIN API users.
+Note: A specific implementation of the Appointment Management API can choose whether or not to implement GET, PATCH, and DELETE for the SearchTimeSlot task resource, according to business considerations (such as the need for accounting or the need to support asynchronous search).
+
+Specific business errors for current operation will be encapsulated in
+
+HTTP Response 422 Unprocessable entity
+
+Delete a search time slot</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>405</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>422</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:request name="Request 1" id="a4dc8fd4-e20a-43ac-a0bb-3cb70a89f766" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://serverRoot</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="searchTimeSlotPatch" id="29418325-64ba-448b-9393-bce5991b29cd" method="PATCH">
+    <con:description>This operation allows partial updates of a search time slot entity.
+Note: this operation is available only to ADMIN API users.
+Note: A specific implementation of the Appointment Management API can choose whether or not to implement GET, PATCH, and DELETE for the SearchTimeSlot task resource, according to business considerations (such as the need for accounting or the need to support asynchronous search).
+
+Specific business errors for current operation will be encapsulated in
+
+HTTP Response 422 Unprocessable entity
+
+Patch a search time slot</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:params/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>405</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>422</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:request name="Request 1" id="43ec72c4-4977-4702-be13-7560d55383cc" mediaType="application/json;charset=utf-8">
+      <con:settings/>
+      <con:endpoint>https://serverRoot</con:endpoint>
+      <con:request/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="ef0e2226-0ca9-4ace-9865-dfe96f687528" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="ef0e2226-0ca9-4ace-9865-dfe96f687528fileName">TestCase-1</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSource" id="25b5f2aa-5892-4b73-9bb5-ebd4483a313a">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>10</generatedDataCount>
+          <generatorsTotalNumber>1</generatorsTotalNumber>
+          <lastSelectedProperty>0</lastSelectedProperty>
+          <GeneratorType0>SSN</GeneratorType0>
+          <PropertyName0>randomID</PropertyName0>
+          <repetitionCountrandomID>0</repetitionCountrandomID>
+          <repeatValuesrandomID>false</repeatValuesrandomID>
+          <Countryssn0>United States</Countryssn0>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>randomID</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="GET - Request 1" id="d5e7a827-7f7c-48fc-9def-36b09b36f257">
+    <con:settings/>
+    <con:config service="Darth Library" resourcePath="/books/{id}" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET - Request 1" id="063b7c30-8dea-419e-921b-9ae4e01b8cf4" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:8088/</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/books/15</con:originalUri>
+        <con:assertion type="Response SLA Assertion" id="3df5d5fa-fea2-434a-ab4c-7835d6b76898" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="8692f97d-a6d8-4ab4-903d-8ac591e6e16b" name="Match content of [title]">
+          <con:configuration>
+            <path>$['result']['title']</path>
+            <content>${GET - Request 1#id}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${DataSource#randomID}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="5af0167a-d90c-4730-bf59-9d7990981c4a">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Copy of GET - Request 1" id="cb244013-f9b0-4d9e-b0bb-273d624095a3">
+    <con:settings/>
+    <con:config service="Darth Library" resourcePath="/books/{id}" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Copy of GET - Request 1" id="063b7c30-8dea-419e-921b-9ae4e01b8cf4" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:8088/</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/books/15</con:originalUri>
+        <con:assertion type="Response SLA Assertion" id="3df5d5fa-fea2-434a-ab4c-7835d6b76898" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="8692f97d-a6d8-4ab4-903d-8ac591e6e16b" name="Match content of [title]">
+          <con:configuration>
+            <path>$['result']['title']</path>
+            <content>${GET - Request 1#id}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${GET - Request 1#Response#$['result']['id']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="5af0167a-d90c-4730-bf59-9d7990981c4a">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="b0617896-eb88-4b2d-8432-713582454f9c">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSource</dataSourceStep>
+      <targetStep>GET - Request 1</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Groovy Script" id="400c2723-25cd-4507-b667-da96a5dd3cb4">
+    <con:settings/>
+    <con:config>
+      <script>def BatchFile = "C:/Users/nathan.wright/Desktop/test.bat"
+
+Runtime.runtime.exec(BatchFile)</script>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>25b5f2aa-5892-4b73-9bb5-ebd4483a313a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

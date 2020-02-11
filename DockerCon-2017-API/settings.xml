@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="e20c7a9e-498f-4e4d-8bb5-0f3d6cf4864e" name="DockerCon 2017 API" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" definitionUrl="https://api.swaggerhub.com/apis/SmartBear_Software/DockerCon_API/1.0.0" basePath="/SmartBear_Software/DockerCon_API/1.0.0" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:description>This is an exclusive API example for DockerCon, which allows users and participants to access and consume DockerCon information.</con:description>
+  <con:settings>
+    <con:setting id="e20c7a9e-498f-4e4d-8bb5-0f3d6cf4864efileName">DockerCon-2017-API</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://api.swaggerhub.com/apis/SmartBear_Software/DockerCon_API/1.0.0">
+    <con:part>
+      <con:url>https://api.swaggerhub.com/apis/SmartBear_Software/DockerCon_API/1.0.0</con:url>
+      <con:content>{"swagger":"2.0","info":{"version":"1.0.0","title":"DockerCon 2017 API","description":"This is an exclusive API example for DockerCon, which allows users and participants to access and consume DockerCon information.","contact":{"email":"support@swaggerhub.com"},"license":{"name":"Apache 2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"}},"paths":{"/agenda":{"get":{"description":"returns list of agenda items","parameters":[{"in":"query","name":"searchString","description":"pass an optional search string for looking up agendas","required":false,"type":"string"},{"in":"query","name":"limit","description":"maximum number of records to return","type":"integer","format":"int32","minimum":0,"maximum":50}],"responses":{"200":{"description":"Search results for Agendas matching criteria","schema":{"type":"array","items":{"type":"object","required":["id","name","date"],"properties":{"id":{"type":"string","format":"uuid","example":12345},"name":{"type":"string","example":"Docker Deep Dive"},"date":{"type":"string","format":"int32","example":"2017-04-18T19:30:00.000Z"}}}}},"400":{"description":"Invalid request","schema":{"type":"object","properties":{"message":{"type":"string","example":"Please revisit again"}}}}}},"post":{"tags":["agenda"],"description":"This method allows you to add the appropriate agendas in the DockerCon system","parameters":[{"in":"body","name":"agendaItem","description":"Agenda to add","schema":{"type":"array","items":{"type":"object","required":["id","name","date"],"properties":{"id":{"type":"string","format":"uuid","example":12345},"name":{"type":"string","example":"Docker Deep Dive"},"date":{"type":"string","format":"int32","example":"2017-04-18T19:30:00.000Z"}}}}}],"responses":{"201":{"description":"Agenda Item succesfully created"},"400":{"description":"Invalid input","schema":{"type":"object","properties":{"message":{"type":"string"}}}},"409":{"description":"An existing Agenda of the same id or name already exists"}}}}},"host":"virtserver.swaggerhub.com","basePath":"/SmartBear_Software/DockerCon_API/1.0.0","schemes":["https"],"x-apigee-id":"DockerCon-Example"}</con:content>
+      <con:type>https://swagger.io/swagger2/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://virtserver.swaggerhub.com</con:endpoint>
+  </con:endpoints>
+</con:interface>

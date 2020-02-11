@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/authors/{id}" method="PATCH" resourcePath="/authors/{id}" id="2f27c75f-ab5f-4211-8f58-e07fa9408c53" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2f27c75f-ab5f-4211-8f58-e07fa9408c53fileName">%2Fauthors%2F%7Bid%7D-1-2-3</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="93d6b855-9cc4-42d7-8849-070825c18370" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "id" : 254,
+  "first_name" : "Darth",
+  "last_name" : "Sidious",
+  "_link" : "/authors/254"
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 2" id="6af2d790-19ff-4a18-b5f8-4254acd3b005" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 3" id="5d539115-2bbb-4fc6-9b75-22f0a267a6dc" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+  </con:response>
+</con:restMockAction>

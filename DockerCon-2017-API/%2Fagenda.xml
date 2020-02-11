@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/agenda" path="/agenda" id="96b426ca-bcb7-4d74-a654-4bc66af51ba9" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="96b426ca-bcb7-4d74-a654-4bc66af51ba9fileName">%2Fagenda</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GET" id="44aa4ff8-6fbc-44d5-b74b-57ad5a888edd" method="GET">
+    <con:description>returns list of agenda items</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>searchString</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>pass an optional search string for looking up agendas</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>limit</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>maximum number of records to return</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="02669df4-dc3a-4f6a-a621-a255a4d822b9" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://virtserver.swaggerhub.com</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="POST" id="419cfbde-0d6c-4bbf-8684-b7ea7852ce56" method="POST">
+    <con:description>This method allows you to add the appropriate agendas in the DockerCon system</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>409</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="4d8d64f2-ae04-408c-aa1d-72a8c829759b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://virtserver.swaggerhub.com</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

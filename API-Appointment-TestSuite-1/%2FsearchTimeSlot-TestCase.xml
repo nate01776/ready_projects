@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="f4d1a42f-69a6-47b0-8676-3f4b4bf7a186" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/searchTimeSlot TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [/searchTimeSlot] located at [/searchTimeSlot]</con:description>
+  <con:settings>
+    <con:setting id="f4d1a42f-69a6-47b0-8676-3f4b4bf7a186fileName">%2FsearchTimeSlot-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="eaf4bc73-79a0-4996-bfaa-37b026afa8cd">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/searchTimeSlot" methodName="searchTimeSlotFind" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="6ad3bdba-fa34-49c6-b712-1830ee4d3067" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Request 1 2" id="c0be7851-0a97-4a10-b8c5-7813527b45e6">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/searchTimeSlot" methodName="searchTimeSlotCreate" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1 2" id="b3dd0629-7193-4eb0-b5b9-f34f0b5ca9da" mediaType="application/json;charset=utf-8">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

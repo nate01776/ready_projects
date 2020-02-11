@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="8d69ec00-5cf3-42be-9f87-3999235272cc" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/appointment TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [/appointment] located at [/appointment]</con:description>
+  <con:settings>
+    <con:setting id="8d69ec00-5cf3-42be-9f87-3999235272ccfileName">%2Fappointment-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="64421528-529b-407e-b559-0cf028b6de69">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/appointment" methodName="appointmentFind" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="820e35ed-db1d-4f6d-b23f-d1b429960aa7" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Request 1 2" id="e0ffbcab-bc23-458b-9480-09176f866bcf">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/appointment" methodName="appointmentCreate" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1 2" id="81b317aa-2595-4343-b3b8-b9b1f836552f" mediaType="application/json;charset=utf-8">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="964e8098-e92e-403e-828c-c73c639c0006" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/appointment/{id} TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [/appointment/{id}] located at [/appointment/{id}]</con:description>
+  <con:settings>
+    <con:setting id="964e8098-e92e-403e-828c-c73c639c0006fileName">%2Fappointment%2F%7Bid%7D-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="cc8b8bf0-bf98-4f92-b72a-8c8b8e45ab69">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/appointment/{id}" methodName="appointmentGet" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="13886922-d04f-494c-862e-4b3232e2f5e2" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Request 1 2" id="b06f16c6-128f-4686-8135-0e7ca410f072">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/appointment/{id}" methodName="appointmentDelete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1 2" id="e14b8bd0-c162-4065-a783-001cd7bc1a9f" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Request 1 3" id="08114333-a413-4b1f-a107-b8ad923d5429">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/appointment/{id}" methodName="appointmentPatch" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1 3" id="2a86cc9b-b961-4165-92d7-ef03eec6cf98" mediaType="application/json;charset=utf-8">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

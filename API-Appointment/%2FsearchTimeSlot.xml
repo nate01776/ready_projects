@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/searchTimeSlot" path="/searchTimeSlot" id="cad0d647-4002-4274-8663-9279e77e90c3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cad0d647-4002-4274-8663-9279e77e90c3fileName">%2FsearchTimeSlot</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="searchTimeSlotFind" id="7aacbbda-50d9-47aa-a567-bc024807aa4d" method="GET">
+    <con:description>This operation list search time slots entities.
+Attribute selection is enabled for all first level attributes.
+Filtering may be available depending on the compliance level supported by an implementation.
+Note: A specific implementation of the Appointment Management API can choose whether or not to implement GET, PATCH, and DELETE for the SearchTimeSlot task resource, according to business considerations (such as the need for accounting or the need to support asynchronous search).
+
+Specific business errors for current operation will be encapsulated in
+
+HTTP Response 422 Unprocessable entity
+
+List search time slots</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>fields</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Attribute selection</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>offset</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Requested index for start of resources to be provided in response requested by client</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>limit</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Requested number of resources to be provided in response requested by client</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>405</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>422</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:request name="Request 1" id="6ad3bdba-fa34-49c6-b712-1830ee4d3067" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://serverRoot</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="searchTimeSlotCreate" id="84414615-e4c3-4c19-9544-7542a1980140" method="POST">
+    <con:description>This operation creates a search time slot entity. It is used to retrieve, according to a set of criteria, available time slots used after to book or reschedule an appointment on.
+
+Specific business errors for current operation will be encapsulated in
+
+HTTP Response 422 Unprocessable entity
+
+Create a search time slot</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:params/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>405</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>422</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:request name="Request 1" id="b3dd0629-7193-4eb0-b5b9-f34f0b5ca9da" mediaType="application/json;charset=utf-8">
+      <con:settings/>
+      <con:endpoint>https://serverRoot</con:endpoint>
+      <con:request/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

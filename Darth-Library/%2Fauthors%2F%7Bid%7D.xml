@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/authors/{id}" path="/authors/{id}" id="f95d1f5a-ff1d-4396-b55a-3d8507af3cc4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f95d1f5a-ff1d-4396-b55a-3d8507af3cc4fileName">%2Fauthors%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:style>TEMPLATE</con:style>
+      <con:dataType>string</con:dataType>
+      <con:description>Book ID to update</con:description>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="GET" id="fb057e0f-de97-4b84-bbff-d7a19ab62266" method="GET">
+    <con:description>Query for a specific author by ID.
+GETS an author object</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 254,
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  }
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="a0ccf2e8-def1-4922-a8df-7950f68adb18" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="a4a02844-bfcc-496d-832c-cc0b41201b3c" method="DELETE">
+    <con:description>Deletes a created book based by ID - does not support name. Returns deleted object.
+DELETEs author object</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "id" : 254,
+  "first_name" : "Darth",
+  "last_name" : "Sidious",
+  "_link" : "/authors/254"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="a3b29362-a025-4d67-80c0-27d94a2df6f1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PATCH" id="95ea6f96-d7e3-48cf-b45c-717f63495405" method="PATCH">
+    <con:description>Updates a created author based by ID - does not support name. Returns deleted object.
+PATCHs author object</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "id" : 254,
+  "first_name" : "Darth",
+  "last_name" : "Sidious",
+  "_link" : "/authors/254"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="70655055-424b-4acb-bbb0-fea5307ace34" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

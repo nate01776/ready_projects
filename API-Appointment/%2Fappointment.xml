@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/appointment" path="/appointment" id="2329be89-76a7-4bd6-9042-022ddbb332f9" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2329be89-76a7-4bd6-9042-022ddbb332f9fileName">%2Fappointment</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="appointmentFind" id="899e805f-ace7-48b3-9954-a23b5e6794a7" method="GET">
+    <con:description>This operation list appointment entities corresponding to given criteria.
+Attribute selection is enabled for all first level attributes.
+Filtering may be available depending on the compliance level supported by an implementation.
+
+Specific business errors for current operation will be encapsulated in
+
+HTTP Response 422 Unprocessable entity
+
+List appointments</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>fields</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Attribute selection</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>offset</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Requested index for start of resources to be provided in response requested by client</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>limit</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Requested number of resources to be provided in response requested by client</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>405</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>422</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:request name="Request 1" id="820e35ed-db1d-4f6d-b23f-d1b429960aa7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://serverRoot</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="appointmentCreate" id="9d76b223-28b1-4903-83bc-2f47a621fe95" method="POST">
+    <con:description>This operation is used to create an appointment.
+The specifications document provides  the  list  of  mandatory  and  non-mandatory  attributes  when  creating  an 
+appointment, including any possible rule conditions and applicable default values.
+
+Specific business errors for current operation will be encapsulated in
+
+HTTP Response 422 Unprocessable entity
+
+Create an appointment</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:params/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>405</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>422</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:representation>
+    <con:request name="Request 1" id="81b317aa-2595-4343-b3b8-b9b1f836552f" mediaType="application/json;charset=utf-8">
+      <con:settings/>
+      <con:endpoint>https://serverRoot</con:endpoint>
+      <con:request/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="87cd22f4-bd24-42d1-848d-44027c5b56dd" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/searchTimeSlot/{searchTimeSlotId} TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [/searchTimeSlot/{searchTimeSlotId}] located at [/searchTimeSlot/{searchTimeSlotId}]</con:description>
+  <con:settings>
+    <con:setting id="87cd22f4-bd24-42d1-848d-44027c5b56ddfileName">%2FsearchTimeSlot%2F%7BsearchTimeSlotId%7D-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="6e5446de-9e1c-4411-a561-806d604edd44">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/searchTimeSlot/{searchTimeSlotId}" methodName="searchTimeSlotGet" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="3929c8ee-8e83-4d5c-9b06-f733e379c3aa" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Request 1 2" id="7fa2331c-7745-4885-b97d-3427dbbe73a2">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/searchTimeSlot/{searchTimeSlotId}" methodName="searchTimeSlotDelete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1 2" id="a4dc8fd4-e20a-43ac-a0bb-3cb70a89f766" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Request 1 3" id="46f7bc3b-82a2-40a2-9c9b-4a8c5ed723e5">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/searchTimeSlot/{searchTimeSlotId}" methodName="searchTimeSlotPatch" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1 3" id="43ec72c4-4977-4702-be13-7560d55383cc" mediaType="application/json;charset=utf-8">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

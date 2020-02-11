@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="8c5a0e31-8518-46f2-91a8-61de628e27c7" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/hub/{hubId} TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [/hub/{hubId}] located at [/hub/{hubId}]</con:description>
+  <con:settings>
+    <con:setting id="8c5a0e31-8518-46f2-91a8-61de628e27c7fileName">%2Fhub%2F%7BhubId%7D-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="1788d0b1-d0f1-419a-a10f-93dc91415d05">
+    <con:settings/>
+    <con:config service="API Appointment" resourcePath="/tmf-api/appointment/v3/hub/{hubId}" methodName="hubDelete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="7449e74c-6a10-4a38-94ae-6f4aead088ce" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://serverRoot</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
