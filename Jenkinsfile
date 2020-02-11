@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh 'apk add --update nodejs npm'
         sh 'node --version'
-        sh 'npm --version'
+        sh 'npm --versio'
         sh 'npm install -g testengine-cli'
       }
     }
