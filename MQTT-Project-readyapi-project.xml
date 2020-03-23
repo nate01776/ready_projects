@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="bed04c96-8f3c-45f8-b03d-e7b7b984cf9a" created="3.1.0" activeEnvironment="Default environment" name="MQTT Project" updated="3.1.0 2020-02-04T16:09:20Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="MQTTConnections"><![CDATA[<Connection>
+  <Name>HiveMQ</Name>
+  <ServerURI>broker.hivemq.com</ServerURI>
+  <caCrtFile/>
+  <crtFile/>
+  <keyFile/>
+  <keysPassword/>
+  <sniHost/>
+  <ClientID/>
+  <CleanSession>false</CleanSession>
+</Connection>]]></con:setting>
+  </con:settings>
+  <con:testSuite id="dd78b5d0-ae10-4d10-b265-30804339e913" name="TestSuite 1">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>PARALLELL</con:runType>
+    <con:testCase id="0a73fc98-c494-468a-ae4d-38706ca39335" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Subscribe to topics" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="MQTTReceiveTestStep" name="Subscribe to Messages" id="95095382-e89f-4618-a109-af63233ae643">
+        <con:settings/>
+        <con:config>
+          <LegacyConnection>false</LegacyConnection>
+          <ConnectionName>HiveMQ</ConnectionName>
+          <Timeout>10000</Timeout>
+          <TimeoutMeasure>Seconds</TimeoutMeasure>
+          <ListenedTopics>nathan_test_topic</ListenedTopics>
+          <QoS>1</QoS>
+          <ExpectedMessageType>Utf8Text</ExpectedMessageType>
+          <OnUnexpectedTopic>Ignore</OnUnexpectedTopic>
+          <assertion type="JsonPath Match" id="00b5f31c-f962-442e-92cc-89a978ccafe1" name="JSONPath Match">
+            <con:configuration>
+              <path>$['message']</path>
+              <content>"washCycle_init"</content>
+              <allowWildcards>false</allowWildcards>
+              <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+              <ignoreComments>false</ignoreComments>
+            </con:configuration>
+          </assertion>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Log &amp; Return" id="149ddc8e-a664-4981-aa62-4bb9f7143628">
+        <con:settings/>
+        <con:config>
+          <script>def receivedMessageID = context.expand( '${Subscribe to Messages#ReceivedMessage#$[\'message_id\']}' )
+def receivedMessageOrigin = context.expand( '${Subscribe to Messages#ReceivedMessage#$[\'origin\']}' )
+
+log.info(receivedMessageID + "__" + receivedMessageOrigin)
+
+if (receivedMessageID != "") {
+	testRunner.gotoStepByName("Subscribe to Messages")
+} else {
+	return
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>149ddc8e-a664-4981-aa62-4bb9f7143628</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="b66f961e-4c99-4f5e-9a4a-400506bba9c3" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Publish Messages" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="datasource" name="DataSource" id="80fbba3d-e64d-4be9-abbb-3c20f3c2ca44">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Data Generator">
+            <con:configuration>
+              <generatedDataCount>25</generatedDataCount>
+              <generatorsTotalNumber>2</generatorsTotalNumber>
+              <lastSelectedProperty>1</lastSelectedProperty>
+              <GeneratorType0>CITY</GeneratorType0>
+              <PropertyName0>random_city</PropertyName0>
+              <repetitionCountrandom_city>0</repetitionCountrandom_city>
+              <repeatValuesrandom_city>false</repeatValuesrandom_city>
+              <GeneratorType1>GUID</GeneratorType1>
+              <PropertyName1>random_id</PropertyName1>
+              <repetitionCountrandom_id>0</repetitionCountrandom_id>
+              <repeatValuesrandom_id>false</repeatValuesrandom_id>
+              <escapeSpaceSequence/>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>random_id</con:property>
+          <con:property>random_city</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="MQTTPublishTestStep" name="Publish to Topic" id="041532a6-4f7b-44ef-b22c-77b33b3e54ce">
+        <con:settings/>
+        <con:config>
+          <LegacyConnection>false</LegacyConnection>
+          <ConnectionName>HiveMQ</ConnectionName>
+          <Timeout>30000</Timeout>
+          <TimeoutMeasure>Seconds</TimeoutMeasure>
+          <MessageKind>Json</MessageKind>
+          <Topic>nathan_test_topic</Topic>
+          <Message>{
+   "message_id" : "${DataSource#random_id}",
+   "origin" : "${DataSource#random_city}",
+   "message" : "washCycle_init"
+}</Message>
+          <QoS>0</QoS>
+          <Retained>false</Retained>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Generate &amp; Assign Random Delay" id="2d6db2a2-c044-4e8f-9aea-15792c195cd9">
+        <con:settings/>
+        <con:config>
+          <script>def randomValue = Math.abs(new Random().nextInt() % 4000)
+
+testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Delay" id="c758df7b-370a-4116-89ab-695793d1fe3c">
+        <con:settings/>
+        <con:config>
+          <delay>${#TestCase#waitTime}</delay>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="e543eb38-2fbf-42a4-b7e3-2a94658e13b9">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>Publish using MQTT</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>waitTime</con:name>
+          <con:value>1131</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>80fbba3d-e64d-4be9-abbb-3c20f3c2ca44</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>e543eb38-2fbf-42a4-b7e3-2a94658e13b9</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c758df7b-370a-4116-89ab-695793d1fe3c</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2d6db2a2-c044-4e8f-9aea-15792c195cd9</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
