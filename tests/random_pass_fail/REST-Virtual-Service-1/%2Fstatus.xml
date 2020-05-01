@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/status" method="GET" resourcePath="/status" id="8f0c6e72-09bf-48c2-8797-7e3c44b317c1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8f0c6e72-09bf-48c2-8797-7e3c44b317c1fileName">%2Fstatus</con:setting>
+  </con:settings>
+  <con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer/>
+  <con:routeEnabled>true</con:routeEnabled>
+  <con:conditionalRoutingEnabled>true</con:conditionalRoutingEnabled>
+  <con:routeScript>//Route Based on Service Availability
+
+// Capture incoming request parameters, can also capture payloads, headers, etc.
+def incomingRequest = mockRequest.httpRequest
+def path = mockRequest.path
+def query = mockRequest.queryString
+def method = mockRequest.method
+
+// Define Route of Service to check, ideally this would be parameterized.
+def route = "http://10.1.2.194:8086"
+
+// Build Check Request based on incoming Request Parameters
+def url = new URL(route + path.toString() + '?' + query.toString()) 
+
+log.info("Routing " + incomingRequest + " to " + route + path.toString() + '?' + query.toString())
+
+// Send Check Request
+HttpURLConnection connection = (HttpURLConnection) url.openConnection()
+connection.setRequestMethod("GET")
+// connection.setConnectTimeout(10000)
+connection.connect()
+log.info(connection.responseCode)
+log.info(connection)
+if (connection.responseCode == 200 || connection.responseCode == 201) {
+    // Route to Service if response code conditions are met.
+    return true
+} else {
+    // Route to Virtual Service if response code conditions are not met.
+    return false
+}</con:routeScript>
+</con:restMockAction>

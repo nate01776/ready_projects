@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="8e05268e-35b0-4021-860b-df22e10ca731" name="TestSuite A" authProfile="SAMPLE_AUTH" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8e05268e-35b0-4021-860b-df22e10ca731fileName">TestSuite-A</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+      <con:authProfile>SAMPLE_AUTH</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

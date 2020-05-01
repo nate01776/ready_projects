@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/books/{id}" method="GET" resourcePath="/books/{id}" id="6bd0b0a8-a0a4-4ec2-ab25-3004c4650672" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6bd0b0a8-a0a4-4ec2-ab25-3004c4650672fileName">%2Fbooks%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:defaultResponse>Response 1</con:defaultResponse>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="7aab0b4b-6332-42c3-9754-ef7ac4bb1aa2" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 66,
+    "title" : "The Tragedy of Darth Plagueis the Wise",
+    "description" : "Not a story the Jedi would tell you",
+    "author" : {
+      "id" : 254,
+      "first_name" : "Darth",
+      "last_name" : "Sidious",
+      "_link" : "/authors/254"
+    },
+    "_link" : "/books/66"
+  }
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 2" id="51ed8647-8ac5-40f4-9d61-d67cff596450" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 3" id="63952f28-1f86-4ec0-a8de-ec4439bd916f" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+  </con:response>
+</con:restMockAction>

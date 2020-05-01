@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/breeds/image/random" method="GET" resourcePath="/breeds/image/random" id="296d99a6-acdc-45b0-ab24-b80d97ae8095" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="296d99a6-acdc-45b0-ab24-b80d97ae8095fileName">%2Fbreeds%2Fimage%2Frandom</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="877b29f6-e064-49ad-ba31-30e65dca540c" httpResponseStatus="200" mediaType="application/json" dataSource="">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+</con:restMockAction>

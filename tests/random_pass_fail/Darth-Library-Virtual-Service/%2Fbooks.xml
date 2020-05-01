@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/books" method="GET" resourcePath="/books" id="16deec2d-c7cc-4ce8-b322-1c0e77365942" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="16deec2d-c7cc-4ce8-b322-1c0e77365942fileName">%2Fbooks</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="1f63be5f-c582-4dd0-8621-72b7f28185f2" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 200,
+  "results" : [ {
+    "id" : "66",
+    "title" : "The Tragedy of Darth Plagueis the Wise",
+    "author_id" : 254,
+    "_link" : "/books/66"
+  }, {
+    "id" : "67",
+    "title" : "Lord Vader: A Story of Rebirth",
+    "author_id" : 387,
+    "_link" : "/books/67"
+  }, {
+    "id" : "68",
+    "title" : "Constructing Your First Lightsaber - A Beginners Guide",
+    "author_id" : 89,
+    "_link" : "/books/68"
+  }, {
+    "id" : "69",
+    "title" : "The Power of the Dark Side",
+    "author_id" : 387,
+    "_link" : "/books/69"
+  } ]
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 2" id="4acd0c65-c8ac-4b7f-9455-74cc7228b21e" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+  </con:response>
+  <con:response name="Response 3" id="17774f7a-ad4b-4159-b579-00509d45003b" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+    <con:settings/>
+    <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+  </con:response>
+</con:restMockAction>
