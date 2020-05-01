@@ -15,7 +15,7 @@ steps:
 
 - task: TestEngine@1
   inputs:
-    filePath: '$(System.DefaultWorkingDirectory)'
+    filePath: '$(System.DefaultWorkingDirectory)\tests'
     serverUrl: 'http://localhost:8080'
     serverUsername: 'admin'
     serverPassword: 'testengine'
