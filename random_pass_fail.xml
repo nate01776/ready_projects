@@ -1,0 +1,2150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d2b0110d-0a13-44a5-8cc0-45d2ad9884ef" created="2.7.0" activeEnvironment="Default environment" name="Example Project" resourceRoot="" updated="3.0.0 2019-11-05T14:42:03Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.support.ProSecurityTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value="PDF"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value="Security Issues Report"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Test Suite" value="&lt;all>"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Security Test" value="&lt;all>"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Test Case" value="&lt;all>"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\ReadyAPI-3.0.0\bin"/>
+  <con:entry key="Environment" value="Default environment"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="${WORKSPACE}"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value="XML"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Slack Channel(s)" value=""/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Test Suite Tags" value=""/>
+  <con:entry key="Select Report Type" value="JUnit-Style report for automation"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Test Suite" value="TestSuite 4"/>
+  <con:entry key="Run in-process" value="false"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Test Case Tags" value=""/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Test Case" value="TestCase 1"/>
+  <con:entry key="Slack Access Token" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\ReadyAPI-3.0.0\bin"/>
+  <con:entry key="Environment" value="Default environment"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="C:\Users\nathan.wright\OneDrive - SmartBear Software, Inc\Example Docs"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
+    <con:setting id="d2b0110d-0a13-44a5-8cc0-45d2ad9884effileName">Example-Project</con:setting>
+  </con:settings>
+  <con:interface xsi:type="con:RestService" id="80183b82-b050-4b7b-a2cb-930bd0036cb4" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://dog.ceo" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings>
+      <con:setting id="80183b82-b050-4b7b-a2cb-930bd0036cb4fileName">https%3A%2F%2Fdog.ceo</con:setting>
+    </con:settings>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:endpoint>https://dog.ceo/api</con:endpoint>
+    </con:endpoints>
+    <con:resource name="all_breeds" path="/breeds" id="35557b02-eb33-4e30-a24a-7b57e2063f6b">
+      <con:settings>
+        <con:setting id="35557b02-eb33-4e30-a24a-7b57e2063f6bfileName">all_breeds</con:setting>
+      </con:settings>
+      <con:parameters/>
+      <con:resource name="all" path="list/all" id="50467bb8-8a02-49f6-8abf-bea00916809d">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="GET" id="519636f9-1635-4b1d-ac21-43b25094fe8c" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:all="https://dog.ceo/api/breeds/list/all">all:Response</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>0</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:request name="Request 1" id="abda0eae-c63f-4bc2-a048-16248a20ea77" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breeds/list/all</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="random" path="image/random" id="6f888ca8-b5e2-44ee-8334-581c92cd3731">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="GET" id="dbedaa41-d041-4773-a8d3-3827e7cdb146" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:ran="https://dog.ceo/api/breeds/image/random">ran:Response</con:element>
+          </con:representation>
+          <con:request name="Request 1" id="690b0584-560d-477b-973b-3f5d2309667a" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breeds/image/random</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:request>
+        </con:method>
+      </con:resource>
+    </con:resource>
+    <con:resource name="single_breed" path="/breed/{breed_name}" id="9d03782f-0158-4308-9e20-8041bdfb2e7e">
+      <con:settings>
+        <con:setting id="9d03782f-0158-4308-9e20-8041bdfb2e7efileName">single_breed</con:setting>
+      </con:settings>
+      <con:parameters>
+        <con:parameter>
+          <con:name>breed_name</con:name>
+          <con:style>TEMPLATE</con:style>
+        </con:parameter>
+      </con:parameters>
+      <con:resource name="all_images" path="/images" id="96032696-7852-45b4-b4aa-3af4b727e712">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>breed_name</con:name>
+            <con:value>breed_name</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>breed_name</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:method name="GET" id="5c34e76e-652c-4e4a-bf7d-a7e05b7b0cf7" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="FAULT">
+            <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element>html</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:imag="https://dog.ceo/api/breeds/hound/images">imag:Response</con:element>
+          </con:representation>
+          <con:request name="Request 1" id="bd312800-d7be-48c1-85cc-fcdb9bd88a1d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breeds/hound/images</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="breed_name" value="hound"/>
+            </con:parameters>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="random_image" path="/images/random" id="eae9a760-f17c-4ccd-b0b2-45a162f55ab1">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>breed_name</con:name>
+            <con:value>breed_name</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>breed_name</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:resource name="multiple" path="{image_count}" id="27cb785b-1a1c-4769-8233-344ba4101103">
+          <con:settings/>
+          <con:parameters/>
+          <con:method name="GET" id="97f264f5-c865-40fb-978c-cb63ae52fc30" method="GET">
+            <con:settings/>
+            <con:parameters>
+              <con:parameter required="true">
+                <con:name>image_count</con:name>
+                <con:value/>
+                <con:style>TEMPLATE</con:style>
+                <con:default/>
+              </con:parameter>
+            </con:parameters>
+            <con:representation type="RESPONSE">
+              <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element>html</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element xmlns:dog="https://dog.ceo/dog-api/">dog:Response</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>text/html;charset=utf-8</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+            </con:representation>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>404</con:status>
+              <con:params/>
+              <con:element xmlns:dog="https://dog.ceo/dog-api/">dog:Fault</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="aa63e926-ef61-4be9-af21-39a20f400b28" mediaType="application/json">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>https://dog.ceo/api</con:endpoint>
+              <con:request/>
+              <con:originalUri>https://dog.ceo/dog-api/</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+                <con:authType>No Authorization</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:parameters>
+                <con:entry key="breed_name" value="hound"/>
+                <con:entry key="image_count" value="3"/>
+              </con:parameters>
+              <con:parameterOrder>
+                <con:entry>breed_name</con:entry>
+                <con:entry>image_count</con:entry>
+              </con:parameterOrder>
+              <con:environmentSpec>
+                <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                  <con:authProfile>No Authorization</con:authProfile>
+                </con:entry>
+                <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                  <con:authProfile>Inherit From Parent</con:authProfile>
+                </con:entry>
+              </con:environmentSpec>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:method name="GET" id="8d6834f4-100b-42a3-8244-03f225ac7b7f" method="GET">
+          <con:settings/>
+          <con:parameters>
+            <con:parameter required="true">
+              <con:name>Auth_token</con:name>
+              <con:value/>
+              <con:style>HEADER</con:style>
+              <con:default/>
+            </con:parameter>
+          </con:parameters>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:ran="https://dog.ceo/api/breed/hound/images/random">ran:Response</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element xmlns:ran="https://dog.ceo/api/breed/hound/images/random">ran:Fault</con:element>
+          </con:representation>
+          <con:request name="Request 1" id="dcaba075-d0b1-43bd-b5e2-0f954c75c7c8" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breed/hound/images/random</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="breed_name" value="hound"/>
+              <con:entry key="Auth_token" value="12309192"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>breed_name</con:entry>
+              <con:entry>Auth_token</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="list_subreeds" path="/list" id="57b77edd-bbf8-43cc-a208-482431a043c1">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>breed_name</con:name>
+            <con:value>breed_name</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>breed_name</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:method name="GET" id="cb8b8f7a-f860-4a19-8da1-ed4f55dabf31" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:list="https://dog.ceo/api/breed/hound/list">list:Response</con:element>
+          </con:representation>
+          <con:request name="Request 1" id="9d34e320-3607-4009-a2d5-404f8d3b356c" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breed/hound/list</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="breed_name" value="hound"/>
+            </con:parameters>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="{sub_breed}" path="{sub_breed}" id="b48accab-3f63-47f9-9c3d-e157c037af9a">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>sub_breed</con:name>
+            <con:value>sub_breed</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>sub_breed</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:resource name="images" path="images" id="10cc6858-b20a-4adc-8c54-a53d14d27f93">
+          <con:settings/>
+          <con:parameters/>
+          <con:resource name="random" path="random" id="564b2e55-10cf-44b5-8557-861ae8a4d824">
+            <con:settings/>
+            <con:parameters/>
+            <con:resource name="{image_count}" path="{image_count}" id="c605378d-932e-44a0-88fb-578629488e7f">
+              <con:settings/>
+              <con:parameters>
+                <con:parameter required="true">
+                  <con:name>image_count</con:name>
+                  <con:value>image_count</con:value>
+                  <con:style>TEMPLATE</con:style>
+                  <con:default>image_count</con:default>
+                </con:parameter>
+              </con:parameters>
+              <con:method name="GET" id="5a1ba866-ce34-46b5-8710-65b261ffa733" method="GET">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                  <con:mediaType>application/json</con:mediaType>
+                  <con:status>200</con:status>
+                  <con:params/>
+                  <con:element xmlns:ns="https://dog.ceo/api/breed/hound/afghan/images/random/3">ns:Response</con:element>
+                </con:representation>
+                <con:request name="Request 1" id="2a7d0d61-ae1f-4818-911e-d7096566cd21" mediaType="application/json">
+                  <con:settings>
+                    <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                  </con:settings>
+                  <con:endpoint>https://dog.ceo/api</con:endpoint>
+                  <con:request/>
+                  <con:originalUri>https://dog.ceo/api/breed/hound/afghan/images/random/3</con:originalUri>
+                  <con:credentials>
+                    <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+                    <con:authType>No Authorization</con:authType>
+                  </con:credentials>
+                  <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                  <con:parameters>
+                    <con:entry key="breed_name" value="hound"/>
+                    <con:entry key="sub_breed" value="afghan"/>
+                    <con:entry key="image_count" value="3"/>
+                  </con:parameters>
+                  <con:environmentSpec>
+                    <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                      <con:authProfile>No Authorization</con:authProfile>
+                    </con:entry>
+                    <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                      <con:authProfile>Inherit From Parent</con:authProfile>
+                    </con:entry>
+                  </con:environmentSpec>
+                </con:request>
+              </con:method>
+            </con:resource>
+            <con:method name="GET" id="37ddd65d-1af1-44c1-869e-a74e8a9c4d27" method="GET">
+              <con:settings/>
+              <con:parameters/>
+              <con:representation type="RESPONSE">
+                <con:mediaType>application/json</con:mediaType>
+                <con:status>200</con:status>
+                <con:params/>
+                <con:element xmlns:ran="https://dog.ceo/api/breed/hound/afghan/images/random">ran:Response</con:element>
+              </con:representation>
+              <con:request name="Request 1" id="d5eb501b-fa99-407f-80fb-38bc8bb7591d" mediaType="application/json">
+                <con:settings>
+                  <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                </con:settings>
+                <con:endpoint>https://dog.ceo/api</con:endpoint>
+                <con:request/>
+                <con:originalUri>https://dog.ceo/api/breed/hound/afghan/images/random</con:originalUri>
+                <con:credentials>
+                  <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+                  <con:authType>No Authorization</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:parameters>
+                  <con:entry key="breed_name" value="hound"/>
+                  <con:entry key="sub_breed" value="afghan"/>
+                </con:parameters>
+                <con:environmentSpec>
+                  <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                    <con:authProfile>No Authorization</con:authProfile>
+                  </con:entry>
+                  <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                    <con:authProfile>Inherit From Parent</con:authProfile>
+                  </con:entry>
+                </con:environmentSpec>
+              </con:request>
+            </con:method>
+          </con:resource>
+          <con:method name="GET" id="026d4381-28bc-4a80-a1b6-7d7bcffca2a1" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>404</con:status>
+              <con:params/>
+              <con:element xmlns:imag="https://dog.ceo/api/breed/hound/afgan/images">imag:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element xmlns:imag="https://dog.ceo/api/breed/hound/afgan/images">imag:Response</con:element>
+            </con:representation>
+            <con:request name="Request 1" id="3d15854e-04c0-451e-b716-2c652f254817" mediaType="application/json">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>https://dog.ceo/api</con:endpoint>
+              <con:request/>
+              <con:originalUri>https://dog.ceo/api/breed/hound/afgan/images</con:originalUri>
+              <con:credentials>
+                <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+                <con:authType>No Authorization</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:parameters>
+                <con:entry key="breed_name" value="hound"/>
+                <con:entry key="sub_breed" value="afghan"/>
+              </con:parameters>
+              <con:environmentSpec>
+                <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                  <con:authProfile>No Authorization</con:authProfile>
+                </con:entry>
+                <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                  <con:authProfile>Inherit From Parent</con:authProfile>
+                </con:entry>
+              </con:environmentSpec>
+            </con:request>
+          </con:method>
+        </con:resource>
+      </con:resource>
+      <con:environmentSpec>
+        <con:entry environmentId="Default">
+          <con:authProfile>SAMPLE_AUTH</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+          <con:authProfile>SAMPLE_AUTH</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="8e05268e-35b0-4021-860b-df22e10ca731" name="TestSuite A" authProfile="SAMPLE_AUTH">
+    <con:settings>
+      <con:setting id="8e05268e-35b0-4021-860b-df22e10ca731fileName">TestSuite-A</con:setting>
+    </con:settings>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="a05d62f5-7d67-44a0-bf9a-2d9b06e0995f" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings>
+        <con:setting id="a05d62f5-7d67-44a0-bf9a-2d9b06e0995ffileName">TestCase-1</con:setting>
+      </con:settings>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="groovy" name="Groovy Script" id="b3c7e581-0037-473e-960c-e4f6568b89fb">
+        <con:settings/>
+        <con:config>
+          <script>def randomValue = Math.abs(new Random().nextInt() % 500000) + 500
+
+testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="64792247-b255-4ca8-bbe6-67751853264e">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Grid">
+            <con:configuration>
+              <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry></xml-fragment>]]></check>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">hound</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">1</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">corgi</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">2</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">bulldog</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">3</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <recognizeAsPlainText>true</recognizeAsPlainText>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>breed_name</con:property>
+          <con:property>some_other_data</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET - Request 1" id="de6fbeee-3976-4b34-a318-b69c8f8ef788">
+        <con:settings/>
+        <con:config service="https://dog.ceo" resourcePath="/breed/{breed_name}/images/random" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET - Request 1" id="dcaba075-d0b1-43bd-b5e2-0f954c75c7c8" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breed/hound/images/random</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="72885ae6-f3b9-4f7e-981f-93e4fbf459f2" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="b14bb7e7-04bd-4dd7-9f6a-a38cf6571b21" name="Script Assertion">
+              <con:configuration>
+                <scriptText>def randomCheck = 4
+
+if (randomCheck &lt; 5) {
+	assert true
+} else {
+	assert false : messageExchange.response.contentAsString
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="breed_name" value="${DataSource#breed_name}"/>
+              <con:entry key="Auth_token" value="${DataSource 2#Auth_token}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>breed_name</con:entry>
+              <con:entry>Auth_token</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="a78fd802-62f7-4962-985f-9b12c33eed46">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource 2</dataSourceStep>
+          <targetStep>GET - Request 1</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Delay" id="a2ff4d13-1481-4568-86aa-550f7992f7ca">
+        <con:settings/>
+        <con:config>
+          <delay>${#TestCase#waitTime}</delay>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>waitTime</con:name>
+          <con:value>159548</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:securityTest id="1ab53490-8ce7-42c8-a242-5d4752567367" testCaseId="a05d62f5-7d67-44a0-bf9a-2d9b06e0995f" name="SecurityTest 1" failSecurityTestOnScanErrors="true">
+        <con:settings/>
+        <con:testStepSecurityTest>
+          <con:testStepId>de6fbeee-3976-4b34-a318-b69c8f8ef788</con:testStepId>
+          <con:testStepSecurityScan type="BoundaryScan" name="Boundary Scan" id="9991c817-2821-4d66-9de8-ad52235b153a" applyForFailedStep="false" disabled="false">
+            <con:settings/>
+            <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:assertion type="Sensitive Information Exposure" id="686b7a09-e223-4d74-af93-3fe6ceb496a3" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameters label="breed_name" parameterName="breed_name" xpath="" checked="true"/>
+              <con:parameters label="Username" parameterName="Username" xpath="" checked="true"/>
+              <con:parameters label="Password" parameterName="Password" xpath="" checked="true"/>
+            </con:checkedParameters>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityScan>
+          <con:testStepSecurityScan type="CrossSiteScriptingScan" name="Cross Site Scripting" id="bb83c682-3581-448a-b914-0d8b11c230fb" applyForFailedStep="false" disabled="false">
+            <con:settings/>
+            <con:config xsi:type="con:CrossSiteScriptingScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameterExposureStrings>&lt;PLAINTEXT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>';alert(String.fromCharCode(88,83,83))//\';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//-->&lt;/SCRIPT>">'>&lt;SCRIPT>alert(String.fromCharCode(88,83,83))&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>'';!--"&lt;XSS>=&amp;{()}</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT SRC=http://soapui.org/xss.js>&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=javascript:alert('XSS')></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=JaVaScRiPt:alert('XSS')></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=javascript:alert(&amp;quot;XSS&amp;quot;)></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=`javascript:alert("RSnake says, 'XSS'")`></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG """>&lt;SCRIPT>alert("XSS")&lt;/SCRIPT>"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=javascript:alert(String.fromCharCode(88,83,83))></con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="jav	ascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x09;ascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x0A;ascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x0D;ascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>perl -e 'print "&lt;IMG SRC=java\0script:alert(\"XSS\")>";' > out</con:parameterExposureStrings>
+              <con:parameterExposureStrings>perl -e 'print "&lt;SCR\0IPT>alert(\"XSS\")&lt;/SCR\0IPT>";' > out</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=" &amp;#14;  javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT/XSS SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BODY onload!#$%&amp;()*~+-_.,:;?@[/|\]^`=alert("XSS")></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT/SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;&lt;SCRIPT>alert("XSS");//&lt;&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT SRC=http://soapui.org/xss.js?&lt;B></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT SRC=//ha.ckers.org/.j></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="javascript:alert('XSS')"</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;iframe src=http://soapui.org/scriptlet.html &lt;</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT>a=/XSS/alert(a.source)&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>\";alert('XSS');//</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;/TITLE>&lt;SCRIPT>alert("XSS");&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;INPUT TYPE="IMAGE" SRC="javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BODY BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BODY ONLOAD=alert('XSS')></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG DYNSRC="javascript:alert('XSS')"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG LOWSRC="javascript:alert('XSS')"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BGSOUND SRC="javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BR SIZE="&amp;{alert('XSS')}"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;LAYER SRC="http://soapui.org/scriptlet.html">&lt;/LAYER></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;LINK REL="stylesheet" HREF="javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;LINK REL="stylesheet" HREF="http://soapui.org/xss.css"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE>@import'http://soapui.org/xss.css';&lt;/STYLE></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;META HTTP-EQUIV="Link" Content="&lt;http://soapui.org/xss.css>; REL=stylesheet"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE>BODY{-moz-binding:url("http://soapui.org/xssmoz.xml#xss")}&lt;/STYLE></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;XSS STYLE="behavior: url(xss.htc);"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE>li {list-style-image: url("javascript:alert('XSS')");}&lt;/STYLE>&lt;UL>&lt;LI>XSS</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC='vbscript:msgbox("XSS")'></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="mocha:[code]"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="livescript:[code]"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>ï¿½scriptï¿½alert(ï¿½XSSï¿½)ï¿½/scriptï¿½</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0; URL=http://;URL=javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IFRAME SRC="javascript:alert('XSS');">&lt;/IFRAME></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;FRAMESET>&lt;FRAME SRC="javascript:alert('XSS');">&lt;/FRAMESET></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;TABLE BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;TABLE>&lt;TD BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;DIV STYLE="background-image: url(javascript:alert('XSS'))"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;DIV STYLE="background-image:\0075\0072\006C\0028'\006a\0061\0076\0061\0073\0063\0072\0069\0070\0074\003a\0061\006c\0065\0072\0074\0028.1027\0058.1053\0053\0027\0029'\0029"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;DIV STYLE="background-image: url(&amp;#1;javascript:alert('XSS'))"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;DIV STYLE="width: expression(alert('XSS'));"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE>@im\port'\ja\vasc\ript:alert("XSS")';&lt;/STYLE></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG STYLE="xss:expr/*XSS*/ession(alert('XSS'))"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;XSS STYLE="xss:expression(alert('XSS'))"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>exp/*&lt;A STYLE='no\xss:noxss("*//*");xss:&amp;#101;x&amp;#x2F;*XSS*//*/*/pression(alert("XSS"))'></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE TYPE="text/javascript">alert('XSS');&lt;/STYLE></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE>.XSS{background-image:url("javascript:alert('XSS')");}&lt;/STYLE>&lt;A CLASS=XSS>&lt;/A></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE type="text/css">BODY{background:url("javascript:alert('XSS')")}&lt;/STYLE></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;!--[if gte IE 4]>&lt;SCRIPT>alert('XSS');&lt;/SCRIPT>&lt;![endif]--></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BASE HREF="javascript:alert('XSS');//"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;OBJECT TYPE="text/x-scriptlet" DATA="http://soapui.org/scriptlet.html">&lt;/OBJECT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;OBJECT classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389>&lt;param name=url value=javascript:alert('XSS')>&lt;/OBJECT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;EMBED SRC="http://soapui.org/xss.swf" AllowScriptAccess="always">&lt;/EMBED></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;EMBED SRC="data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dH A6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hs aW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjAiIHk9IjAiIHdpZHRoPSIxOTQiIGhlaWdodD0iMjAw IiBpZD0ieHNzIj48c2NyaXB0IHR5cGU9InRleHQvZWNtYXNjcmlwdCI+YWxlcnQoIlh TUyIpOzwvc2NyaXB0Pjwvc3ZnPg==" type="image/svg+xml" AllowScriptAccess="always">&lt;/EMBED></con:parameterExposureStrings>
+              <con:parameterExposureStrings>a="get";b="URL(\"";c="javascript:";d="alert('XSS');\")";eval(a+b+c+d);</con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<XML ID=I><X><C><![CDATA[<IMG SRC="javas]]]]>><![CDATA[<![CDATA[cript:alert('XSS');">]]]]>><![CDATA[</C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<XML ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:alert('XSS')"&gt;</B></I></XML><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<HTML><BODY><?xml:namespace prefix="t" ns="urn:schemas-microsoft-com:time"><?import namespace="t" implementation="#default#time2"><t:set attributeName="innerHTML" to="XSS&lt;SCRIPT DEFER&gt;alert(&quot;XSS&quot;)&lt;/SCRIPT&gt;"></BODY></HTML>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT SRC="http://soapui.org/xss.jpg">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;? echo('&lt;SCR)';echo('IPT>alert("XSS")&lt;/SCRIPT>'); ?></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="http://soapui.org/somecommand.php?somevariables=maliciouscode"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>Redirect 302 /a.jpg http://soapui.org/admin.asp&amp;deleteuser</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;META HTTP-EQUIV="Set-Cookie" Content="USERID=&amp;lt;SCRIPT&amp;gt;alert('XSS')&amp;lt;/SCRIPT&amp;gt;"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;HEAD>&lt;META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-7"> &lt;/HEAD>+ADw-SCRIPT+AD4-alert('XSS');+ADw-/SCRIPT+AD4-</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT a=">" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT =">" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT a=">" '' SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT "a='>'" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT a=`>` SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT a=">'>" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT>document.write("&lt;SCRI");&lt;/SCRIPT>PT SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+            </con:config>
+            <con:assertion type="Sensitive Information Exposure" id="042100f2-bc7d-4de9-8ae2-34670a896773" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:assertion type="CrosSiteScript" id="62cdc1af-a7bb-4b11-897b-b71c2905085e" name="Cross Site Scripting Detection">
+              <con:configuration/>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameters label="breed_name" parameterName="breed_name" xpath="" checked="true"/>
+              <con:parameters label="Username" parameterName="Username" xpath="" checked="true"/>
+              <con:parameters label="Password" parameterName="Password" xpath="" checked="true"/>
+            </con:checkedParameters>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityScan>
+          <con:testStepSecurityScan type="FuzzingScan" name="Fuzzing Scan" id="dfac1196-30bc-4b0f-b1cc-6647eafac98e" applyForFailedStep="false" disabled="false">
+            <con:settings/>
+            <con:config xsi:type="con:FuzzerScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:minimal>5</con:minimal>
+              <con:maximal>15</con:maximal>
+              <con:numberOfRequest>100</con:numberOfRequest>
+            </con:config>
+            <con:assertion type="Sensitive Information Exposure" id="8133dde8-a160-4e0b-beac-c6988d35d6ba" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameters label="breed_name" parameterName="breed_name" xpath="" checked="true"/>
+              <con:parameters label="Username" parameterName="Username" xpath="" checked="true"/>
+              <con:parameters label="Password" parameterName="Password" xpath="" checked="true"/>
+            </con:checkedParameters>
+            <con:executionStrategy xsi:nil="true" immutable="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ALL_AT_ONCE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityScan>
+          <con:testStepSecurityScan type="InvalidTypesSecurityScan" name="Invalid Types" id="0bb914fe-23aa-4de1-9602-ea31b7bbd07f" applyForFailedStep="false" disabled="false">
+            <con:settings/>
+            <con:config xsi:type="con:InvalidSecurityScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:typesList>
+                <con:type>3</con:type>
+                <con:value>true</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>4</con:type>
+                <con:value>GpM7</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>5</con:type>
+                <con:value>0FB7</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>9</con:type>
+                <con:value>-1E4f</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>10</con:type>
+                <con:value>12.45E+12</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>11</con:type>
+                <con:value>-1.23</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>12</con:type>
+                <con:value>SoapUI is	 the
+ best</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>13</con:type>
+                <con:value>P1Y2M3DT10H30M12.3S</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>14</con:type>
+                <con:value>1999-05-31T13:20:00.000-05:00</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>16</con:type>
+                <con:value>1999-05-31</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>22</con:type>
+                <con:value>-1267896799</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>23</con:type>
+                <con:value>-882223334991111111</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>24</con:type>
+                <con:value>-2147483647</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>25</con:type>
+                <con:value>-32768</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>26</con:type>
+                <con:value>127</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>27</con:type>
+                <con:value>0</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>28</con:type>
+                <con:value>-1</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>29</con:type>
+                <con:value>1</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>30</con:type>
+                <con:value>1267896799</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>31</con:type>
+                <con:value>882223334991111111</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>32</con:type>
+                <con:value>294967295</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>33</con:type>
+                <con:value>65535</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>34</con:type>
+                <con:value>255</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>35</con:type>
+                <con:value>SoapUI is the best</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>36</con:type>
+                <con:value>SoapUI is the best</con:value>
+              </con:typesList>
+            </con:config>
+            <con:assertion type="Sensitive Information Exposure" id="a7a5bfe7-cbe0-496a-96b9-3f8b619c19ec" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameters label="breed_name" parameterName="breed_name" xpath="" checked="true"/>
+              <con:parameters label="Username" parameterName="Username" xpath="" checked="true"/>
+              <con:parameters label="Password" parameterName="Password" xpath="" checked="true"/>
+            </con:checkedParameters>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityScan>
+          <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="b6204ee4-f313-472f-9001-5a23de126b06" applyForFailedStep="false" disabled="false">
+            <con:settings/>
+            <con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:sqlInjectionStrings>' or '1'='1</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>'--</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>1'</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>admin'--</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>/*!10000%201/0%20*/</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>/*!10000 1/0 */</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>1/0</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>'%20o/**/r%201/0%20--</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>' o/**/r 1/0 --</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>;</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>'%20and%201=2%20--</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>' and 1=2 --</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>test� UNION select 1, @@version, 1, 1;�</con:sqlInjectionStrings>
+            </con:config>
+            <con:assertion type="Sensitive Information Exposure" id="276dc1ef-4d85-4edf-b97f-f3b8e1344a62" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameters label="breed_name" parameterName="breed_name" xpath="" checked="true"/>
+              <con:parameters label="Username" parameterName="Username" xpath="" checked="true"/>
+              <con:parameters label="Password" parameterName="Password" xpath="" checked="true"/>
+            </con:checkedParameters>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityScan>
+          <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="9c34c52d-f607-41ff-828f-bd3cc55487ab" applyForFailedStep="false" disabled="false">
+            <con:settings/>
+            <con:config xsi:type="con:XPathInjection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:xpathList>or name(//users/LoginID[1]) = 'LoginID' or 'a'='b</con:xpathList>
+              <con:xpathList>' or '1'='1</con:xpathList>
+              <con:xpathList>1/0</con:xpathList>
+              <con:xpathList>'%20o/**/r%201/0%20--</con:xpathList>
+              <con:xpathList>' o/**/r 1/0 --</con:xpathList>
+              <con:xpathList>;</con:xpathList>
+              <con:xpathList>'%20and%201=2%20--</con:xpathList>
+              <con:xpathList>' and 1=2 --</con:xpathList>
+              <con:xpathList>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:xpathList>
+              <con:xpathList>test� UNION select 1, @@version, 1, 1;�</con:xpathList>
+            </con:config>
+            <con:assertion type="Sensitive Information Exposure" id="6babcb92-dcc5-4a90-8255-a26624f4be49" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameters label="breed_name" parameterName="breed_name" xpath="" checked="true"/>
+              <con:parameters label="Username" parameterName="Username" xpath="" checked="true"/>
+              <con:parameters label="Password" parameterName="Password" xpath="" checked="true"/>
+            </con:checkedParameters>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityScan>
+          <con:testStepSecurityProScan type="HttpMethodFuzzingScan" name="HTTP Method Fuzzing" id="b4a98f66-287c-425c-b0a2-621fc01974db" applyForFailedStep="false" disabled="false">
+            <con:settings/>
+            <con:config xsi:type="con:HttpMethodFuzzingScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:deselectedMethods/>
+            </con:config>
+            <con:assertion type="Sensitive Information Exposure" id="3ef5f996-0a4f-4394-abc5-6276e0f5589e" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="d48380fe-34f9-4fa1-9e7f-ed89dbdb3b03" name="Valid HTTP Status Codes">
+              <con:settings>
+                <con:setting id="__LEVEL_">WARNING</con:setting>
+              </con:settings>
+              <con:configuration>
+                <codes>501,405,403</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityProScan>
+          <con:testStepSecurityProScan type="SensitiveFileSecurityScan" name="Sensitive Files Exposure" id="251f1c18-4896-4e4c-a63e-c58c7eb3604d" applyForFailedStep="false" disabled="false">
+            <con:settings/>
+            <con:config xsi:type="con:SensitiveFileSecurityScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/known_hosts"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/authorized_keys"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa.bak"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa.old"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa~"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa.bak"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa.old"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa~"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess.bak"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess.old"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/htaccess.txt"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess~"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd.bak"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd.old"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd~"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.bash_history"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.bashrc"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.history"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.profile"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.mysql_history"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/~root"/>
+              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/config"/>
+              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/HEAD"/>
+              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/index"/>
+              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.svn/entries"/>
+              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.svn/wc.db"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/pccsmysqladm/incs/dbconnect.inc"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/perl/"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/phpBB/phpinfo.php"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/weblogic"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/wp-admin/wp-login.php"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/wp-content/debug.log"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/WEB-INF/web.xml"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/iisadmin/"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/iissamples/"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.jsp"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.php"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html.bak"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html.old"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html~"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/manager"/>
+              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/config/database.yml"/>
+              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/config/initializers/secret_token.rb"/>
+              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/db/seeds.rb"/>
+              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/db/development.sqlite3"/>
+            </con:config>
+            <con:assertion type="Sensitive Files Exposure Assertion" id="79120184-7a6b-484b-add4-9b15eae0c47b" name="Sensitive Files Exposure"/>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityProScan>
+          <con:testStepSecurityProScan type="WeakAuthenticationScan" name="Weak Authentication" id="0f4015b2-6d1b-448e-b8d4-e914f805e128" applyForFailedStep="false" disabled="false">
+            <con:settings/>
+            <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:assertion type="WeakPassword" id="ede94c81-934d-4da3-b182-c3a9f206c6f1" name="Weak Password Detection">
+              <con:configuration/>
+            </con:assertion>
+            <con:assertion type="BasicAuth" id="bed4ccce-5c16-497f-8f56-207656bb7357" name="Basic Authentication Detection"/>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityProScan>
+        </con:testStepSecurityTest>
+        <con:properties/>
+        <con:reportParameters/>
+      </con:securityTest>
+      <con:breakPoints>
+        <con:testStepId>a2ff4d13-1481-4568-86aa-550f7992f7ca</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b3c7e581-0037-473e-960c-e4f6568b89fb</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+    <con:environmentSpec>
+      <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+        <con:authProfile>SAMPLE_AUTH</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:testSuite>
+  <con:testSuite id="34644014-2206-49b2-818d-7f95294a5d32" name="TestSuite B" authProfile="SAMPLE_AUTH">
+    <con:settings>
+      <con:setting id="34644014-2206-49b2-818d-7f95294a5d32fileName">TestSuite-B</con:setting>
+    </con:settings>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="86a1e18b-d7e0-4df4-a306-f8ef4f4f5c52" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings>
+        <con:setting id="86a1e18b-d7e0-4df4-a306-f8ef4f4f5c52fileName">TestCase-1</con:setting>
+      </con:settings>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="groovy" name="Groovy Script" id="57111d2d-9c69-458b-9d7a-24e7809d1c25">
+        <con:settings/>
+        <con:config>
+          <script>def randomValue = Math.abs(new Random().nextInt() % 5000) + 500
+
+testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="a76e80c0-d7e1-433c-8efe-0a97057a5052">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Grid">
+            <con:configuration>
+              <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry></xml-fragment>]]></check>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">hound</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">1</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">corgi</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">2</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">bulldog</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">3</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <recognizeAsPlainText>true</recognizeAsPlainText>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>breed_name</con:property>
+          <con:property>some_other_data</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET - Request 1" id="bae49f6f-cdce-4976-9184-631cb2fa1c2c">
+        <con:settings/>
+        <con:config service="https://dog.ceo" resourcePath="/breed/{breed_name}/images/random" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET - Request 1" id="dcaba075-d0b1-43bd-b5e2-0f954c75c7c8" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breed/hound/images/random</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="72885ae6-f3b9-4f7e-981f-93e4fbf459f2" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="b14bb7e7-04bd-4dd7-9f6a-a38cf6571b21" name="Script Assertion">
+              <con:configuration>
+                <scriptText>def randomCheck = Math.abs(new Random().nextInt() % 10) + 1
+
+if (randomCheck &lt; 5) {
+	assert true
+} else {
+	assert false : messageExchange.response.contentAsString
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="breed_name" value="corgi"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>breed_name</con:entry>
+              <con:entry>Auth_token</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Delay" id="072bfbeb-be6a-449a-b595-99ecfeb86a65">
+        <con:settings/>
+        <con:config>
+          <delay>${#TestCase#waitTime}</delay>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>waitTime</con:name>
+          <con:value>619</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a2ff4d13-1481-4568-86aa-550f7992f7ca</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b3c7e581-0037-473e-960c-e4f6568b89fb</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+    <con:environmentSpec>
+      <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+        <con:authProfile>SAMPLE_AUTH</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:testSuite>
+  <con:testSuite id="3e19b313-bd2e-4f3a-93ba-e613a9b1ea37" name="TestSuite C" authProfile="SAMPLE_AUTH">
+    <con:settings>
+      <con:setting id="3e19b313-bd2e-4f3a-93ba-e613a9b1ea37fileName">TestSuite-C</con:setting>
+    </con:settings>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="2bcd8730-b070-4b28-8616-11e05eb915a1" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings>
+        <con:setting id="2bcd8730-b070-4b28-8616-11e05eb915a1fileName">TestCase-1</con:setting>
+      </con:settings>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="groovy" name="Groovy Script" id="cf041584-7610-47ac-bb5f-4e954aae32ad">
+        <con:settings/>
+        <con:config>
+          <script>def randomValue = Math.abs(new Random().nextInt() % 5000) + 500
+
+testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="a8a0fa91-b065-4197-9b11-65a8787c7d8c">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Grid">
+            <con:configuration>
+              <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry></xml-fragment>]]></check>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">hound</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">1</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">corgi</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">2</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">bulldog</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">3</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <recognizeAsPlainText>true</recognizeAsPlainText>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>breed_name</con:property>
+          <con:property>some_other_data</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET - Request 1" id="ec4b5dc9-a8f4-4917-9c41-fa8d08ea03c8">
+        <con:settings/>
+        <con:config service="https://dog.ceo" resourcePath="/breed/{breed_name}/images/random" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET - Request 1" id="dcaba075-d0b1-43bd-b5e2-0f954c75c7c8" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://dog.ceo/api</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dog.ceo/api/breed/hound/images/random</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="72885ae6-f3b9-4f7e-981f-93e4fbf459f2" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="b14bb7e7-04bd-4dd7-9f6a-a38cf6571b21" name="Script Assertion">
+              <con:configuration>
+                <scriptText>def randomCheck = Math.abs(new Random().nextInt() % 10) + 1
+
+if (randomCheck &lt; 5) {
+	assert true
+} else {
+	assert false : messageExchange.response.contentAsString
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="breed_name" value="corgi"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>breed_name</con:entry>
+              <con:entry>Auth_token</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="b3cbd788-c58c-4164-ace0-3620088e7f7d">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Delay" id="04929f41-cb25-4f27-8ba6-30773864f286">
+        <con:settings/>
+        <con:config>
+          <delay>${#TestCase#waitTime}</delay>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>waitTime</con:name>
+          <con:value>619</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a2ff4d13-1481-4568-86aa-550f7992f7ca</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b3c7e581-0037-473e-960c-e4f6568b89fb</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+    <con:environmentSpec>
+      <con:entry environmentId="f1504dff-ed51-4b31-8d40-f141ffc2dedd">
+        <con:authProfile>SAMPLE_AUTH</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:testSuite>
+  <con:restMockService id="0a545e5f-5bc3-4110-9fc8-3df340531758" port="8088" path="/" host="localhost" name="https://dog.ceo Virtual Service" routeModeEnabled="true">
+    <con:settings>
+      <con:setting id="0a545e5f-5bc3-4110-9fc8-3df340531758fileName">https%3A%2F%2Fdog.ceo-Virtual-Service</con:setting>
+    </con:settings>
+    <con:properties/>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:virtError>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:headerValidator type="NONE"/>
+    <con:restMockAction name="/breeds" method="GET" resourcePath="/breeds" id="a68319cb-96f7-447c-b8a5-8e709644884e">
+      <con:settings>
+        <con:setting id="a68319cb-96f7-447c-b8a5-8e709644884efileName">%2Fbreeds</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="148f8a38-b383-471e-8bda-4d0bd85bb816" httpResponseStatus="200" dataSource="">
+        <con:settings/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breeds/list/all" method="GET" resourcePath="/breeds/list/all" id="26107866-cc34-41b7-8fc2-8f11ad11e04d">
+      <con:settings>
+        <con:setting id="26107866-cc34-41b7-8fc2-8f11ad11e04dfileName">%2Fbreeds%2Flist%2Fall</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="cb787eea-ca1c-4435-a365-a08f6fdfb943" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+      <con:response name="Response 2" id="12a5d6c8-f331-424d-9148-183fee76904c" httpResponseStatus="0" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breeds/image/random" method="GET" resourcePath="/breeds/image/random" id="296d99a6-acdc-45b0-ab24-b80d97ae8095">
+      <con:settings>
+        <con:setting id="296d99a6-acdc-45b0-ab24-b80d97ae8095fileName">%2Fbreeds%2Fimage%2Frandom</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="877b29f6-e064-49ad-ba31-30e65dca540c" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}" method="GET" resourcePath="/breed/{breed_name}" id="2dc26061-e78d-415d-b445-db2223c1452b">
+      <con:settings>
+        <con:setting id="2dc26061-e78d-415d-b445-db2223c1452bfileName">%2Fbreed%2F%7Bbreed_name%7D</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="a6d82d23-948c-4675-bf72-8e382301cd56" httpResponseStatus="200" dataSource="">
+        <con:settings/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/images" method="GET" resourcePath="/breed/{breed_name}/images" id="68454825-38c7-438c-8f69-877f42bcd0b3">
+      <con:settings>
+        <con:setting id="68454825-38c7-438c-8f69-877f42bcd0b3fileName">%2Fbreed%2F%7Bbreed_name%7D%2Fimages</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="31acf6bb-98ca-4bcc-b8eb-c13f605c6254" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/images/random" method="GET" resourcePath="/breed/{breed_name}/images/random" id="024f1823-2a66-40ca-a2a3-8fa175fadeef">
+      <con:settings>
+        <con:setting id="024f1823-2a66-40ca-a2a3-8fa175fadeeffileName">%2Fbreed%2F%7Bbreed_name%7D%2Fimages%2Frandom</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="c55a2832-dfa5-41e5-8cba-303a64bc1500" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/images/random/{image_count}" method="GET" resourcePath="/breed/{breed_name}/images/random/{image_count}" id="45b7dcea-bb69-4979-b7f4-827362f067c6">
+      <con:settings>
+        <con:setting id="45b7dcea-bb69-4979-b7f4-827362f067c6fileName">%2Fbreed%2F%7Bbreed_name%7D%2Fimages%2Frandom%2F%7Bimage_count%7D</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="489925b2-b3ad-49cc-a417-176185ab44e2" httpResponseStatus="200" mediaType="text/html" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+      <con:response name="Response 2" id="d00d578c-a7b8-4a3c-8947-bc949ca44d18" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+      <con:response name="Response 3" id="340d4b54-a108-4c48-a10d-e0023824c685" httpResponseStatus="200" mediaType="text/html" encoding="utf-8" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/list" method="GET" resourcePath="/breed/{breed_name}/list" id="ce2ccbe4-7b00-4696-bdb1-c677e6ccd6c3">
+      <con:settings>
+        <con:setting id="ce2ccbe4-7b00-4696-bdb1-c677e6ccd6c3fileName">%2Fbreed%2F%7Bbreed_name%7D%2Flist</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="3f335703-606f-4773-8d06-8d410931471f" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/{sub_breed}" method="GET" resourcePath="/breed/{breed_name}/{sub_breed}" id="e5d5af3e-4234-4317-8d08-d1938e7bcfbf">
+      <con:settings>
+        <con:setting id="e5d5af3e-4234-4317-8d08-d1938e7bcfbffileName">%2Fbreed%2F%7Bbreed_name%7D%2F%7Bsub_breed%7D</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="cfbe724e-2725-4034-a455-933abce03b2c" httpResponseStatus="200" dataSource="">
+        <con:settings/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/{sub_breed}/images" method="GET" resourcePath="/breed/{breed_name}/{sub_breed}/images" id="038e02d9-d87c-4902-bed1-f97fac0cc7ed">
+      <con:settings>
+        <con:setting id="038e02d9-d87c-4902-bed1-f97fac0cc7edfileName">%2Fbreed%2F%7Bbreed_name%7D%2F%7Bsub_breed%7D%2Fimages</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="cfb72639-0897-44a1-b597-a75472fa6721" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/{sub_breed}/images/random" method="GET" resourcePath="/breed/{breed_name}/{sub_breed}/images/random" id="a7318dfc-c1cb-4282-937f-bea00a90b148">
+      <con:settings>
+        <con:setting id="a7318dfc-c1cb-4282-937f-bea00a90b148fileName">%2Fbreed%2F%7Bbreed_name%7D%2F%7Bsub_breed%7D%2Fimages%2Frandom</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="d798fb38-eb0a-4c57-820b-9121660b6625" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/breed/{breed_name}/{sub_breed}/images/random/{image_count}" method="GET" resourcePath="/breed/{breed_name}/{sub_breed}/images/random/{image_count}" id="eda87e91-f03a-4700-8ee2-f142dbfcdfcd">
+      <con:settings>
+        <con:setting id="eda87e91-f03a-4700-8ee2-f142dbfcdfcdfileName">%2Fbreed%2F%7Bbreed_name%7D%2F%7Bsub_breed%7D%2Fimages%2Frandom%2F%7Bimage_count%7D</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="74c089e0-911b-46ba-bb34-8e742c088dbe" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+    </con:restMockAction>
+  </con:restMockService>
+  <con:restMockService id="25917067-0615-4ad9-be61-d204790da71d" port="8081" path="/" host="localhost" name="REST Virtual Service 1" routeModeEnabled="false" routeUnmatchedOperation="false" addUnmatchedOperation="false" routeEndpoint="http://localhost:8088">
+    <con:settings>
+      <con:setting id="25917067-0615-4ad9-be61-d204790da71dfileName">REST-Virtual-Service-1</con:setting>
+    </con:settings>
+    <con:properties/>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:virtError>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:headerValidator type="NONE"/>
+    <con:restMockAction name="/status" method="GET" resourcePath="/status" id="8f0c6e72-09bf-48c2-8797-7e3c44b317c1">
+      <con:settings>
+        <con:setting id="8f0c6e72-09bf-48c2-8797-7e3c44b317c1fileName">%2Fstatus</con:setting>
+      </con:settings>
+      <con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:parameterDispatcherRuleContainer/>
+      <con:routeEnabled>true</con:routeEnabled>
+      <con:conditionalRoutingEnabled>true</con:conditionalRoutingEnabled>
+      <con:routeScript>//Route Based on Service Availability
+
+// Capture incoming request parameters, can also capture payloads, headers, etc.
+def incomingRequest = mockRequest.httpRequest
+def path = mockRequest.path
+def query = mockRequest.queryString
+def method = mockRequest.method
+
+// Define Route of Service to check, ideally this would be parameterized.
+def route = "http://10.1.2.194:8086"
+
+// Build Check Request based on incoming Request Parameters
+def url = new URL(route + path.toString() + '?' + query.toString()) 
+
+log.info("Routing " + incomingRequest + " to " + route + path.toString() + '?' + query.toString())
+
+// Send Check Request
+HttpURLConnection connection = (HttpURLConnection) url.openConnection()
+connection.setRequestMethod("GET")
+// connection.setConnectTimeout(10000)
+connection.connect()
+log.info(connection.responseCode)
+log.info(connection)
+if (connection.responseCode == 200 || connection.responseCode == 201) {
+    // Route to Service if response code conditions are met.
+    return true
+} else {
+    // Route to Virtual Service if response code conditions are not met.
+    return false
+}</con:routeScript>
+    </con:restMockAction>
+  </con:restMockService>
+  <con:restMockService id="a177fbc9-fc60-40bc-aa2f-02bd080a4834" port="8089" path="/" host="localhost" name="Darth Library Virtual Service">
+    <con:settings>
+      <con:setting id="a177fbc9-fc60-40bc-aa2f-02bd080a4834fileName">Darth-Library-Virtual-Service</con:setting>
+    </con:settings>
+    <con:properties/>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:virtError>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:dataSources>
+      <con:dataSource>
+        <con:dataSource type="Excel">
+          <con:configuration>
+            <file/>
+            <worksheet/>
+            <cell>A1</cell>
+            <ignoreEmpty>false</ignoreEmpty>
+            <evaluateFormulas>false</evaluateFormulas>
+          </con:configuration>
+        </con:dataSource>
+        <con:name>Data Source 1</con:name>
+      </con:dataSource>
+    </con:dataSources>
+    <con:headerValidator type="NONE"/>
+    <con:restMockAction name="/books" method="GET" resourcePath="/books" id="16deec2d-c7cc-4ce8-b322-1c0e77365942">
+      <con:settings>
+        <con:setting id="16deec2d-c7cc-4ce8-b322-1c0e77365942fileName">%2Fbooks</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="1f63be5f-c582-4dd0-8621-72b7f28185f2" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 200,
+  "results" : [ {
+    "id" : "66",
+    "title" : "The Tragedy of Darth Plagueis the Wise",
+    "author_id" : 254,
+    "_link" : "/books/66"
+  }, {
+    "id" : "67",
+    "title" : "Lord Vader: A Story of Rebirth",
+    "author_id" : 387,
+    "_link" : "/books/67"
+  }, {
+    "id" : "68",
+    "title" : "Constructing Your First Lightsaber - A Beginners Guide",
+    "author_id" : 89,
+    "_link" : "/books/68"
+  }, {
+    "id" : "69",
+    "title" : "The Power of the Dark Side",
+    "author_id" : 387,
+    "_link" : "/books/69"
+  } ]
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="4acd0c65-c8ac-4b7f-9455-74cc7228b21e" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="17774f7a-ad4b-4159-b579-00509d45003b" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/books" method="POST" resourcePath="/books" id="be71db34-d352-4d59-a64b-8d3812cb5e4f">
+      <con:settings>
+        <con:setting id="be71db34-d352-4d59-a64b-8d3812cb5e4ffileName">%2Fbooks-1-2-3</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="f8c5367a-3a32-4d3e-b33e-f8220cef7840" httpResponseStatus="201" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "id" : 66,
+  "title" : "The Tragedy of Darth Plagueis the Wise",
+  "description" : "Not a story the Jedi would tell you",
+  "author" : {
+    "id" : 254,
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  },
+  "_link" : "/books/66"
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="39d492a7-c91b-43d7-9401-2d177b694ee8" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="4fdf15ef-ba4c-4b3c-989e-62b0a4720987" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/books/{id}" method="GET" resourcePath="/books/{id}" id="6bd0b0a8-a0a4-4ec2-ab25-3004c4650672">
+      <con:settings>
+        <con:setting id="6bd0b0a8-a0a4-4ec2-ab25-3004c4650672fileName">%2Fbooks%2F%7Bid%7D</con:setting>
+      </con:settings>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:parameterDispatcherRuleContainer/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="7aab0b4b-6332-42c3-9754-ef7ac4bb1aa2" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 66,
+    "title" : "The Tragedy of Darth Plagueis the Wise",
+    "description" : "Not a story the Jedi would tell you",
+    "author" : {
+      "id" : 254,
+      "first_name" : "Darth",
+      "last_name" : "Sidious",
+      "_link" : "/authors/254"
+    },
+    "_link" : "/books/66"
+  }
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="51ed8647-8ac5-40f4-9d61-d67cff596450" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="63952f28-1f86-4ec0-a8de-ec4439bd916f" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/books/{id}" method="DELETE" resourcePath="/books/{id}" id="85c55036-7504-4c26-8080-9540694180c5">
+      <con:settings>
+        <con:setting id="85c55036-7504-4c26-8080-9540694180c5fileName">%2Fbooks%2F%7Bid%7D-1-2-3-4-5</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="ecb43a73-55c3-4a09-9699-adfc82a30475" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "id" : 66,
+  "title" : "The Tragedy of Darth Plagueis the Wise",
+  "description" : "Not a story the Jedi would tell you",
+  "author" : {
+    "id" : 254,
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  },
+  "_link" : "/books/66"
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="c6435fff-cc16-4402-abca-48cdee3e22e7" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="a1009df3-64c8-472d-bd69-7af2a6000f83" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/books/{id}" method="PATCH" resourcePath="/books/{id}" id="a48aa466-5cfe-4fb3-8f05-9e4c85bf7118">
+      <con:settings>
+        <con:setting id="a48aa466-5cfe-4fb3-8f05-9e4c85bf7118fileName">%2Fbooks%2F%7Bid%7D-1-2-3</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="49af6802-856a-474f-adc2-dbce2d78fb9a" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "id" : 66,
+  "title" : "The Tragedy of Darth Plagueis the Wise",
+  "description" : "Not a story the Jedi would tell you",
+  "author" : {
+    "id" : 254,
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  },
+  "_link" : "/books/66"
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="ca79435a-b426-4ee4-bc02-be0918fb7eef" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="1f4b4f90-75f5-47da-9d04-7a52701c57f7" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/authors" method="GET" resourcePath="/authors" id="ed074b49-cc00-452c-a9e9-b3210bc241b5">
+      <con:settings>
+        <con:setting id="ed074b49-cc00-452c-a9e9-b3210bc241b5fileName">%2Fauthors</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="8df25695-9f6d-47c8-b525-8fe0cbd07c85" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 200,
+  "results" : [ {
+    "id" : "254",
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  }, {
+    "id" : "255",
+    "first_name" : "Wilhuff",
+    "last_name" : "Tarkin",
+    "_link" : "/authors/255"
+  }, {
+    "id" : "256",
+    "first_name" : "Orson",
+    "last_name" : "Krennic",
+    "_link" : "/authors/256"
+  } ]
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="3259eb6d-5396-4e9c-8dfa-86db110ab454" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="44a57c18-8684-44cc-a7cb-509c6d0bc9cd" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/authors" method="POST" resourcePath="/authors" id="c72d3141-0361-4f1f-a33e-8bf8e49a0f54">
+      <con:settings>
+        <con:setting id="c72d3141-0361-4f1f-a33e-8bf8e49a0f54fileName">%2Fauthors-1-2-3</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="14ccedd2-034f-4682-9c52-e4637700229c" httpResponseStatus="201" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "id" : 254,
+  "first_name" : "Darth",
+  "last_name" : "Sidious",
+  "_link" : "/authors/254"
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="d53e1324-4c5a-4cb4-a78f-c5425069f361" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="1a6c3c4e-7aff-4a0e-ae5f-c55c13ccdcad" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/authors/{id}" method="GET" resourcePath="/authors/{id}" id="5948c089-0cad-42a7-bd4b-8cf29f27a5c9">
+      <con:settings>
+        <con:setting id="5948c089-0cad-42a7-bd4b-8cf29f27a5c9fileName">%2Fauthors%2F%7Bid%7D</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="e8e80b76-c36a-4ea1-8107-98181bb8e91a" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 254,
+    "first_name" : "Darth",
+    "last_name" : "Sidious",
+    "_link" : "/authors/254"
+  }
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="8cd5d7c8-4cb4-4b41-8fa4-d7219d96a1ec" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="f1ac5576-be23-48c3-aaeb-f704b8c26668" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/authors/{id}" method="DELETE" resourcePath="/authors/{id}" id="57534e3d-69ec-47ed-a8ce-2f8eb4f09480">
+      <con:settings>
+        <con:setting id="57534e3d-69ec-47ed-a8ce-2f8eb4f09480fileName">%2Fauthors%2F%7Bid%7D-1-2-3-4-5</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="6704bbbd-1347-4a69-8fe7-fd154f92fed0" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "id" : 254,
+  "first_name" : "Darth",
+  "last_name" : "Sidious",
+  "_link" : "/authors/254"
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="01fab00b-33b3-4563-8c28-f06b2f06456f" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="2d1a5f46-c872-4c23-9232-b4a2ad218208" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/authors/{id}" method="PATCH" resourcePath="/authors/{id}" id="cdb697d0-9d68-4880-b890-57a135e2525d">
+      <con:settings>
+        <con:setting id="cdb697d0-9d68-4880-b890-57a135e2525dfileName">%2Fauthors%2F%7Bid%7D-1-2-3</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="89ea57ae-702c-42b2-a1dc-5a129e5cca6b" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "id" : 254,
+  "first_name" : "Darth",
+  "last_name" : "Sidious",
+  "_link" : "/authors/254"
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="18c65425-7e4f-4e01-b64d-7da08a8572f6" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="c9ca4cb0-edbc-4760-9f43-4929cc33d9ef" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="/subjects" method="GET" resourcePath="/subjects" id="050cecdc-1588-4abc-9338-8c9608d8e9f6">
+      <con:settings>
+        <con:setting id="050cecdc-1588-4abc-9338-8c9608d8e9f6fileName">%2Fsubjects</con:setting>
+      </con:settings>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="3fd955b6-b53d-44c1-af7b-683ab91a6697" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 200,
+  "results" : [ {
+    "id" : "66",
+    "title" : "The Tragedy of Darth Plagueis the Wise",
+    "author_id" : 254,
+    "_link" : "/books/66"
+  }, {
+    "id" : "67",
+    "title" : "Lord Vader: A Story of Rebirth",
+    "author_id" : 387,
+    "_link" : "/books/67"
+  }, {
+    "id" : "68",
+    "title" : "Constructing Your First Lightsaber - A Beginners Guide",
+    "author_id" : 89,
+    "_link" : "/books/68"
+  }, {
+    "id" : "69",
+    "title" : "The Power of the Dark Side",
+    "author_id" : 387,
+    "_link" : "/books/69"
+  } ]
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 2" id="2ea3d785-58a8-4fe0-9e00-7513557d9fa8" httpResponseStatus="404" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 404,
+  "message" : "This was not the request you're looking for."
+}</con:responseContent>
+      </con:response>
+      <con:response name="Response 3" id="22d51b39-6a04-47f0-b4bb-5e42ccb97f78" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "status" : 500,
+  "message" : "There is a great disturbance in the server."
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+  </con:restMockService>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>newProp</con:name>
+      <con:value>123</con:value>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }
+
+log.info(request.requestContent)</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:environment id="f1504dff-ed51-4b31-8d40-f141ffc2dedd" name="stage">
+    <con:service type="REST" name="https://dog.ceo">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://localhost:8088/</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>newProp</con:name>
+      <con:value>123</con:value>
+    </con:property>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:authRepository>
+    <con:basicAuthEntry>
+      <con:name>SAMPLE_AUTH</con:name>
+      <con:type>Basic</con:type>
+      <con:username>sample</con:username>
+      <con:password>auth</con:password>
+      <con:preemptive>true</con:preemptive>
+    </con:basicAuthEntry>
+    <con:basicAuthEntry>
+      <con:name>basicAuth BASIC</con:name>
+      <con:type>Basic</con:type>
+    </con:basicAuthEntry>
+  </con:authRepository>
+  <con:tags/>
+</con:soapui-project>

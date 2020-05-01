@@ -1,0 +1,20 @@
+GraphQL Project 1
+
+- There are two test suites in the project - one for REST, one for GraphQL. You should be able to run each test case and open the transaction log to view the back/forth.
+
+- Rest Example
+-- This is a similar workflow to what is in the slides
+-- Start by getting a list of all people
+-- Two steps take the 'Luke Skywalker' URL, store it as a property and parse out the ID
+-- It then gets the 'person' data, by that ID
+-- The datasource loop goes through each film in the response and gets that data
+** There is a bug in RAPI that prevents the nested responses from showing in the transaction log.
+** When you run the test case, it will both log responses to the console or, there is an assertion that will force a failure and the response values will pop up in the transaction log + reports.
+
+- What we wanted to show with this, was that a series of calls has to happen across different paths in order to get the data we want (a characters info, and the info about the movies they were in.)
+
+- GQL Example
+-- These can be run all together, or step by step
+-- There are two test cases, each one matching the examples in the slides.
+-- The first test case has two steps - one to get 'allPeople', the second takes the first ID and gets person data (including the film information).
+-- The second test case allows you to get all the information in a single query by taking the 'filmConnection' and adding it to the 'allPeople' request. This means that what we had to do over 10+ calls in the REST example is now done with a single GraphQL request.

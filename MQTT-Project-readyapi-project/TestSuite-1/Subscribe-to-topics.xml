@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="0a73fc98-c494-468a-ae4d-38706ca39335" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Subscribe to topics" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0a73fc98-c494-468a-ae4d-38706ca39335fileName">Subscribe-to-topics</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="groovy" name="Log &amp; Return" id="149ddc8e-a664-4981-aa62-4bb9f7143628">
+    <con:settings/>
+    <con:config>
+      <script>def receivedMessageID = context.expand( '${Subscribe to Messages#ReceivedMessage#$[\'message_id\']}' )
+def receivedMessageOrigin = context.expand( '${Subscribe to Messages#ReceivedMessage#$[\'origin\']}' )
+
+log.info(receivedMessageID + "__" + receivedMessageOrigin)
+
+if (receivedMessageID != "") {
+	testRunner.gotoStepByName("Subscribe to Messages")
+} else {
+	return
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>149ddc8e-a664-4981-aa62-4bb9f7143628</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

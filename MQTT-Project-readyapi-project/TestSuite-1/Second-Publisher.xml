@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="bffd4ed5-5081-47d6-b291-ec6de40fee86" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Second Publisher" searchProperties="true" timeout="0" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bffd4ed5-5081-47d6-b291-ec6de40fee86fileName">Second-Publisher</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSource" id="7e7814ee-24c8-484d-917a-9dbf590762d7">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>25</generatedDataCount>
+          <generatorsTotalNumber>2</generatorsTotalNumber>
+          <lastSelectedProperty>0</lastSelectedProperty>
+          <GeneratorType0>EMAIL</GeneratorType0>
+          <PropertyName0>random_email</PropertyName0>
+          <repetitionCountrandom_email>0</repetitionCountrandom_email>
+          <repeatValuesrandom_email>false</repeatValuesrandom_email>
+          <GeneratorType1>INT</GeneratorType1>
+          <PropertyName1>random_id</PropertyName1>
+          <repetitionCountrandom_id>0</repetitionCountrandom_id>
+          <repeatValuesrandom_id>false</repeatValuesrandom_id>
+          <IntegerDataGeneratorMinValuerandom_id>1000</IntegerDataGeneratorMinValuerandom_id>
+          <IntegerDataGeneratorMaxValuerandom_id>10000</IntegerDataGeneratorMaxValuerandom_id>
+          <IntegerDataGeneratorStepValuerandom_id>1</IntegerDataGeneratorStepValuerandom_id>
+          <IntegerDataGeneratorConsequentValuesrandom_id>false</IntegerDataGeneratorConsequentValuesrandom_id>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>random_id</con:property>
+      <con:property>random_email</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Generate &amp; Assign Random Delay" id="462b5e4c-235e-4747-b71d-a3622b46658d">
+    <con:settings/>
+    <con:config>
+      <script>def randomValue = Math.abs(new Random().nextInt() % 4000)
+
+testRunner.testCase.setPropertyValue("waitTime", randomValue.toString())</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay" id="9b76813d-4126-4423-941b-5be53bd4e5c5">
+    <con:settings/>
+    <con:config>
+      <delay>${#TestCase#waitTime}</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="cc206c07-e0b7-46c5-926b-db07bc553a9d">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSource</dataSourceStep>
+      <targetStep>Publish to Topic</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>waitTime</con:name>
+      <con:value>331</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+</con:testCase>
