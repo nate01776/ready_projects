@@ -15,7 +15,7 @@ steps:
 
 - task: TestEngine@1
   inputs:
-    filePath: '$(System.DefaultWorkingDirectory)/random_project/random_pass_fail.xml'
+    filePath: '$(System.DefaultWorkingDirectory)/MQTT-Project-readyapi-project'
     serverUrl: 'http://localhost:8080'
     serverUsername: 'admin'
     serverPassword: 'testengine'
