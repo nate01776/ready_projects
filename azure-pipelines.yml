@@ -17,5 +17,5 @@ steps:
   inputs:
     filePath: '$(System.DefaultWorkingDirectory)\tests'
     serverUrl: 'http://localhost:8080'
-    serverUsername: 'admin'
-    serverPassword: 'testengine'
+    serverUsername: 'azure_agent'
+    serverPassword: 'newpass'
